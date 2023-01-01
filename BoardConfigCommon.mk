@@ -54,6 +54,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x0ff88000 --second_offset 0x00e88000 --tags_offset 0x07988000
 
 TARGET_KERNEL_OPTIONAL_LD := true
+KERNEL_SUPPORTS_LLVM_TOOLS := true
 
 # Kernel Source
 TARGET_KERNEL_CONFIG := merge_hi6250_defconfig
