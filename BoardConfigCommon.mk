@@ -53,6 +53,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x0ff88000 --second_offset 0x00e88000 --tags_offset 0x07988000
 
+TARGET_KERNEL_OPTIONAL_LD := true
+
 # Kernel Source
 TARGET_KERNEL_CONFIG := merge_hi6250_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/hi6250-9
