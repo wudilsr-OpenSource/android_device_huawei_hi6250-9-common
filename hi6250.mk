@@ -91,8 +91,7 @@ PRODUCT_PACKAGES += \
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@1.2.vendor
+    android.hardware.gnss@1.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
