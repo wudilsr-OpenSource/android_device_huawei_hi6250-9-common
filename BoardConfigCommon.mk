@@ -56,6 +56,9 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x0ff88000 -
 TARGET_KERNEL_OPTIONAL_LD := true
 KERNEL_SUPPORTS_LLVM_TOOLS := true
 
+TARGET_KERNEL_CLANG_VERSION := r416183b
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+
 # Kernel Source
 TARGET_KERNEL_CONFIG := merge_hi6250_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/hi6250-9
