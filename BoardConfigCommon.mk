@@ -76,7 +76,8 @@ TARGET_BOARD_PLATFORM := hi6250
 
 # Props
 TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
-PRODUCT_ODM_PROPERTIES += $(COMMON_PATH)/properties/odm.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/properties/odm.prop
+
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.hi6250
