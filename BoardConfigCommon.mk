@@ -76,7 +76,6 @@ TARGET_BOARD_PLATFORM := hi6250
 
 # Props
 TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
-TARGET_ODM_PROP += $(COMMON_PATH)/properties/odm.prop
 
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true

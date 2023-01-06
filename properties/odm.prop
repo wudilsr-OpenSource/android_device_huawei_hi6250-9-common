@@ -1,8 +1,0 @@
-#
-# odm.prop for hi6250-9-common
-#
-
-ro.product.odm.brand=Huawei
-ro.product.odm.name=Dallas
-ro.product.odm.device=Dallas
-ro.product.first_api_level=24
