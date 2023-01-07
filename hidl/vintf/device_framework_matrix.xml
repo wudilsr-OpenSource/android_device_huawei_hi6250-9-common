@@ -1,4 +1,4 @@
-<compatibility-matrix version="2.0" type="framework">
+<compatibility-matrix version="2.0" type="framework" level="3">
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -324,16 +324,6 @@
         <fqname>@1.0::IModemlogcat/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.huawei.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IHWNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IHWNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.huawei.hardware.perfgenius</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -440,5 +430,72 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.1::ISupplicant/default</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.health</name>
+        <version>2.1</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.cas</name>
+        <version>1.2</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+     </hal>
+     <hal format="hidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+     </hal>
+     <hal format="hidl" optional="true">
+        <name>android.hardware.nfc</name>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+     <hal format="hidl" optional="true">
+     <name>android.hardware.drm</name>
+        <version>1.4</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+     </hal>
+     <hal format="aidl" optional="true">
+     <name>android.hardware.wifi.hostapd</name>
+     <interface>
+        <name>IHostapd</name>
+        <instance>default</instance>
+     </interface>
+     </hal>
+     <hal format="aidl" optional="true">
+     <name>android.hardware.wifi.supplicant</name>
+     <interface>
+        <name>ISupplicant</name>
+        <instance>default</instance>
+    </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+    <name>android.hardware.wifi</name>
+    <version>1.0-6</version>
+    <interface>
+        <name>IWifi</name>
+        <instance>default</instance>
+    </interface>
     </hal>
 </compatibility-matrix>
