@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- non-translateable strings-->
+    <string name="app_name" translatable="false">MatLog</string>
+    <string name="log_level_value_debug" translatable="false">D</string>
+    <string name="log_level_value_error" translatable="false">E</string>
+    <string name="log_level_value_info" translatable="false">I</string>
+    <string name="log_level_value_verbose" translatable="false">V</string>
+    <string name="log_level_value_warn" translatable="false">W</string>
+    <string name="log_level_value_wtf" translatable="false">F</string>
+    <string name="pref_buffer" translatable="false">bufferSet</string>
+    <string name="pref_buffer_choice_events_value" translatable="false">events</string>
+    <string name="pref_buffer_choice_main_value" translatable="false">main</string>
+    <string name="pref_buffer_choice_radio_value" translatable="false">radio</string>
+    <string name="pref_default_log_level" translatable="false">default_level</string>
+    <string name="pref_display_limit" translatable="false">display_limit</string>
+    <string name="pref_display_limit_default" translatable="false">10000</string>
+    <string name="pref_expanded_by_default" translatable="false">expand_default</string>
+    <string name="pref_hide_partial_select_help">pref_hide_partial_select_help</string>
+    <string name="pref_include_device_info" translatable="false">device_info</string>
+    <string name="pref_log_line_period" translatable="false">log_line_period</string>
+    <string name="pref_log_line_period_default" translatable="false">200</string>
+    <string name="pref_ran_jellybean_su_update">jellybean_su</string>
+    <string name="pref_show_timestamp" translatable="false">show_timestamp</string>
+    <string name="pref_text_size" translatable="false">text_size</string>
+    <string name="text_size_large_value" translatable="false">L</string>
+    <string name="text_size_medium_value" translatable="false">M</string>
+    <string name="text_size_small_value" translatable="false">S</string>
+    <string name="text_size_xlarge_value" translatable="false">XL</string>
+    <string name="text_size_xsmall_value" translatable="false">XS</string>
+    <string name="pref_include_dmesg" translatable="false">dmesg</string>
+
+    <!-- translateable strings-->
+
+    <string name="log_level_debug">Debug</string>
+    <string name="log_level_error">Error</string>
+    <string name="log_level_info">Info</string>
+    <string name="log_level_verbose">Verbose</string>
+    <string name="log_level_warn">Warn</string>
+    <string name="log_level_wtf">What a Terrible Failure</string>
+    <string name="add_filter">Add Filter</string>
+    <string name="add_filter_ellipsis">Add Filter…</string>
+    <plurals name="are_you_sure">
+        <item quantity="one"><xliff:g example="1" id="files">%1$d</xliff:g> file will be deleted</item>
+        <item quantity="other"><xliff:g example="1" id="files">%1$d</xliff:g> files will be deleted</item>
+    </plurals>
+    <string name="checkbox_never_show_partial_select_help">Don\'t show again</string>
+    <string name="copied_to_clipboard">Copied to clipboard.</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
+    <string name="default_in_parens">(Default)</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="delete_saved_log">Delete Saved Logs</string>
+    <string name="dialog_compiling_log">Compiling log…</string>
+    <string name="dialog_initializing_recorder">Loading recorder…</string>
+    <string name="dialog_loading_updates">Loading updates…</string>
+    <string name="dialog_partial_select_explanation">1. Select the <b>first</b> line.\n2. Then select the <b>last</b> line.</string>
+    <string name="dialog_please_wait">Please wait</string>
+    <string name="enter_filename">Enter filename to save:</string>
+    <string name="enter_good_filename">Please enter a valid filename.</string>
+    <plurals name="files_deleted">
+        <item quantity="one"><xliff:g example="1" id="files">%1$d</xliff:g> file be deleted</item>
+        <item quantity="other"><xliff:g example="1" id="files">%1$d</xliff:g> files deleted</item>
+    </plurals>
+    <string name="filter_choice">Search by</string>
+    <string name="filter_choice_pid">PID</string>
+    <string name="filter_choice_tag">Tag</string>
+    <string name="filter_text_colon">Filter text:</string>
+    <string name="log_level">Log Level</string>
+    <string name="log_level_colon">Log level:</string>
+    <string name="log_recording_started">Log recording started.</string>
+    <string name="log_saved">Log saved.</string>
+    <string name="manage_saved_logs">Manage Saved Logs</string>
+    <string name="menu_title_partial_select">Save Partial</string>
+    <string name="no_saved_logs">No saved logs found.</string>
+    <string name="notification_subtext">Select to stop recording.</string>
+    <string name="notification_ticker">Log recording started</string>
+    <string name="notification_title">Log recording in progress</string>
+    <string name="open">Open</string>
+    <string name="open_log">Open Log</string>
+    <string name="pref_buffer_choice_events">Events</string>
+    <string name="pref_buffer_choice_main">Main</string>
+    <string name="pref_buffer_choice_radio">Radio</string>
+    <string name="pref_buffer_none_checked_error">Please check at least one buffer.</string>
+    <string name="pref_buffer_title">Log Buffer(s)</string>
+    <string name="pref_cat_advanced">Advanced</string>
+    <string name="pref_cat_appearance">Appearance</string>
+    <string name="pref_cat_configuration">Configuration</string>
+    <string name="pref_default_log_level_summary">Log level at startup, when opening files, and when recording (%s)</string>
+    <string name="pref_default_log_level_title">Default Log Level</string>
+    <string name="pref_display_limit_summary">Show only the last %1$d logs, to avoid OutOfMemoryErrors. (Default: %2$s)</string>
+    <string name="pref_display_limit_title">Log Display Limit</string>
+    <string name="pref_expanded_by_default_summary">Show full log text by default.</string>
+    <string name="pref_expanded_by_default_title">Expand by Default</string>
+    <string name="pref_log_line_period_error">Please enter an integer between 1 and 1000.</string>
+    <string name="pref_log_line_period_summary">When recording, write to SD card every %1$d line(s) (default: %2$s).</string>
+    <string name="pref_log_line_period_title">Write Period</string>
+    <string name="pref_show_timestamp_summary">Show process id and timestamp when expanded.</string>
+    <string name="pref_show_timestamp_title">Show Pid &amp; Timestamp</string>
+    <string name="pref_text_size_title">Text Size</string>
+    <string name="record_log">Record Log</string>
+    <string name="save">Save</string>
+    <string name="save_as">Save As…</string>
+    <string name="save_log">Save Log</string>
+    <string name="sd_card_not_found">SD card not found.</string>
+    <string name="select_logs_to_delete">Select which logs to delete.</string>
+    <string name="send_log_title">Send Log</string>
+    <string name="settings">Settings</string>
+    <string name="simultaneous"> (Simultaneous)</string>
+    <string name="start_recording_log">Record</string>
+    <string name="subject_log_report">Log report</string>
+    <string name="text_filter_ellipsis">Filter…</string>
+    <string name="text_filter_text">Filter text</string>
+    <string name="text_include_device_info">Include device information</string>
+    <string name="text_size_large_name">Large (14pt)</string>
+    <string name="text_size_medium_name">Medium (12pt)</string>
+    <string name="text_size_small_name">Small (10pt)</string>
+    <string name="text_size_xlarge_name">Extra Large (16pt)</string>
+    <string name="text_size_xsmall_name">Extra Small (8pt)</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_filters">Filters</string>
+    <string name="toast_invalid_display_limit">Please enter a valid number between %1$d and %2$d.</string>
+    <string name="toast_invalid_level">Invalid level name: %s</string>
+    <string name="toast_invalid_selection">Invalid selection.  Please try again.</string>
+    <plurals name="toast_log_truncated">
+        <item quantity="one">Log too large; showing last <xliff:g example="1" id="lines">%1$d</xliff:g> line.</item>
+        <item quantity="other">Log too large; showing last <xliff:g example="1" id="lines">%1$d</xliff:g> lines.</item>
+    </plurals>
+    <string name="toast_pref_changed_restart_required">Setting updated. Restart MatLog to see the changes.</string>
+    <string name="toast_request_root">MatLog requires root (superuser) access to read logs.</string>
+    <string name="toast_started_select_partial">Select Partial mode enabled</string>
+    <string name="unable_to_save_log">Unable to save log. Did you enter a valid filename?</string>
+    <string name="file">File</string>
+    <string name="clear">Clear</string>
+    <string name="expand_or_collapse_all">Expand/Collapse all</string>
+    <string name="no_logs_warning_title">Can\'t access system logs</string>
+    <string name="no_logs_warning">%1$s doesn\'t have the permission necessary to access logcat. You\'ll only see its own logs.&lt;br/>&lt;br/>You have two options to grant %1$s the permission:&lt;br/>- Root your device&lt;br/>- Connect your device to a computer with Android SDK installed and run the following command (only need to be done once):&lt;br/>&lt;tt>%2$s&lt;/tt></string>
+    <string name="copy_command">Copy command</string>
+    <string name="adb_command">ADB Command</string>
+    <string name="permission_not_granted">This feature will not work without permission to write external storage.</string>
+    <string name="search">Search</string>
+    <string name="scrubber">Omit sensitive info</string>
+    <string name="scrubber_summary">Omit sensitive info like web urls, phone numbers or emails</string>
+    <string name="text_include_dmesg">Include kernel log</string>
+    <string name="save_log_zip">Save zip</string>
+    <string name="share_log">Share</string>
+    <string name="channel_name">Record notification</string>
+    <string name="message_filters">Click on filter to activate</string>
+    <string name="filter_choice_messager">Click on search filter</string>
+    <string name="widget_status_stopped">Stopped</string>
+    <string name="widget_status_recording">Recording</string>
+</resources>

@@ -143,6 +143,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+
+# Matlog
+PRODUCT_PACKAGES += \
+    MatLog
+
 # MAC Loader
 PRODUCT_PACKAGES += \
     mac_nvme
