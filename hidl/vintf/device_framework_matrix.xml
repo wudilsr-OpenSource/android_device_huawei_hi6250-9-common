@@ -10,7 +10,7 @@
         </interface>
         <fqname>@1.1::IRadio/slot1</fqname>
         <fqname>@1.1::IRadio/slot2</fqname>
-    </hal>
+   </hal>
     <hal format="hidl">
         <name>vendor.huawei.hardware.activity_recognition</name>
         <transport>hwbinder</transport>
