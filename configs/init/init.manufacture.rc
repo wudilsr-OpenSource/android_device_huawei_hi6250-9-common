@@ -52,7 +52,7 @@ on boot
 
 service atcmdserver /vendor/bin/atcmdserver
     class main
-    group root system nfc graphics audio camera
+    group root system graphics audio camera
     disabled
     seclabel u:r:atcmdserver:s0
 

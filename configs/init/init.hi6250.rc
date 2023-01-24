@@ -336,10 +336,6 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-on post-fs-data
-    mkdir /data/vendor/nfc 0770 nfc nfc
-    restorecon_recursive /data/vendor/nfc
-
     mkdir /data/share 0770 media_rw media_rw
     chown media_rw media_rw /data/share
 
@@ -530,19 +526,6 @@ on boot
     chown system system /sys/devices/platform/huawei_sensor/fingersense_latch_data
     chmod 0440 /sys/devices/platform/huawei_sensor/fingersense_latch_data
     chown root system /proc/sensorhub_logbuff
-# add for nfc
-    chown nfc nfc /sys/nfc/nfc_wired_ese_type
-    chmod 0444 /sys/nfc/nfc_wired_ese_type
-    chown nfc nfc /sys/nfc/nfc_activated_se_info
-    chmod 0664 /sys/nfc/nfc_activated_se_info
-    chown nfc nfc /sys/nfc/nfc_hal_dmd
-    chmod 0664 /sys/nfc/nfc_hal_dmd
-    chown nfc nfc /sys/nfc/nfc_calibration
-    chmod 0444 /sys/nfc/nfc_calibration
-    chown nfc nfc /sys/nfc/nfc_get_rssi
-    chmod 0664 /sys/nfc/nfc_get_rssi
-    chown nfc nfc /sys/nfc/nfc_recovery_close_nfc
-    chmod 0664 /sys/nfc/nfc_recovery_close_nfc
 
     # /* Modified by z00196632 for audio start */
     chmod 660 /proc/hifidsp/hifi
@@ -573,46 +556,6 @@ on boot
     write /proc/sys/net/core/netdev_max_backlog 2000
     write /proc/sys/net/core/rmem_max 8388608
     write /proc/sys/net/core/wmem_max 8388608
-
-    #nfc
-	chown nfc nfc /sys/nfc/nfc_fwupdate
-	chmod 0664 /sys/nfc/nfc_fwupdate
-	chown nfc nfc /sys/nfc/nxp_config_name
-	chmod 0664 /sys/nfc/nxp_config_name
-	chown nfc nfc /sys/nfc/nfc_brcm_conf_name
-	chmod 0664 /sys/nfc/nfc_brcm_conf_name
-	chown nfc nfc /sys/nfc/nfc_sim_switch
-	chmod 0664 /sys/nfc/nfc_sim_switch
-	chown nfc nfc /sys/nfc/nfc_sim_status
-	chmod 0444 /sys/nfc/nfc_sim_status
-	chown nfc nfc /sys/nfc/rd_nfc_sim_status
-	chmod 0444 /sys/nfc/rd_nfc_sim_status
-	chown nfc nfc /sys/nfc/nfc_enable_status
-	chmod 0664 /sys/nfc/nfc_enable_status
-	chown nfc nfc /sys/nfc/nfc_card_num
-	chmod 0444 /sys/nfc/nfc_card_num
-	chown nfc nfc /sys/nfc/nfc_chip_type
-	chmod 0444 /sys/nfc/nfc_chip_type
-	chown nfc nfc /sys/nfc/nfc_fw_version
-	chmod 0444 /sys/nfc/nfc_fw_version
-	chown nfc nfc /sys/nfc/nfcservice_lock
-	chmod 0664 /sys/nfc/nfcservice_lock
-	chown nfc nfc /sys/nfc/nfc_svdd_sw
-	chmod 0664 /sys/nfc/nfc_svdd_sw
-	chown nfc nfc /sys/nfc/nfc_close_type
-	chmod 0664 /sys/nfc/nfc_close_type
-	chown nfc nfc /sys/nfc/nfc_single_channel
-	chmod 0444 /sys/nfc/nfc_single_channel
-	chown system nfc /sys/nfc/nfc_age_test_flag_state
-	chmod 0640 /sys/nfc/nfc_age_test_flag_state
-	chown nfc nfc /sys/nfc/nfc_wired_ese_type
-	chmod 0444 /sys/nfc/nfc_wired_ese_type
-	chown nfc nfc /sys/nfc/nfc_activated_se_info
-	chmod 0664 /sys/nfc/nfc_activated_se_info
-	chown nfc nfc /sys/nfc/nfc_switch_state
-	chmod 0664 /sys/nfc/nfc_switch_state
-	chown nfc nfc /sys/nfc/nfc_at_result
-	chmod 0664 /sys/nfc/nfc_at_result
 
     #add for showing sensor thermal meter
     chown system system /sys/class/camerafs/node/thermal_meter
