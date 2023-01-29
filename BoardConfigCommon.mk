@@ -63,6 +63,9 @@ KERNEL_SUPPORTS_LLVM_TOOLS := true
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
+TARGET_KERNEL_CLANG_VERSION := r416183b1
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
     
 # Kernel Source
 TARGET_KERNEL_CONFIG := merge_hi6250_defconfig
