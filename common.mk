@@ -35,6 +35,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Huawei (stubs)
+PRODUCT_PACKAGES += \
+    libchrlog \
+    libhwlog \
+    libimonitor \
+    libxcollie
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
