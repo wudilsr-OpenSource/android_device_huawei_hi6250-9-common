@@ -150,7 +150,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    wpa_supplicant
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+-include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/huawei/hi6250-9-common/hi6250-9-common-vendor.mk)
