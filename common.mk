@@ -91,6 +91,10 @@ PRODUCT_PACKAGES += \
     libdrmclearkeyplugin \
     libmockdrmcryptoplugin
 
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-v29 \
+    libprotobuf-cpp-lite-v29
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
