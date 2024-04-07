@@ -14,6 +14,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir/etc/connectivity/,$(TARGET_COPY_OUT_VENDOR)/etc/init/connectivity)
 
+# Camera
+PRODUCT_PACKAGES += \
+    vendor.huawei.hardware.biometrics.hwfacerecognize@1.1.vendor
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -37,7 +41,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+    vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
