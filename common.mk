@@ -55,7 +55,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    vendor.huawei.hardware.biometrics.hwfacerecognize@1.1.vendor
+    vendor.huawei.hardware.biometrics.hwfacerecognize@1.1.vendor \
+    vendor.huawei.hardware.sensors@1.0.vendor
 
 # ConfigStore
 PRODUCT_PACKAGES += \
@@ -148,7 +149,9 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor
+    android.frameworks.sensorservice@1.0.vendor \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
