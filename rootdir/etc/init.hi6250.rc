@@ -218,10 +218,6 @@ on post-fs-data
     # Create the directories used by the Bluetooth subsystem
     mkdir /data/vendor/bluedroid 0771 bluetooth bluetooth
 
-    # NFC
-    mkdir /data/vendor/nfc 0770 nfc nfc
-    restorecon_recursive /data/vendor/nfc
-
     mkdir /data/share 0770 media_rw media_rw
     chown media_rw media_rw /data/share
 
@@ -618,59 +614,6 @@ on boot
     chmod 0440 /sys/devices/platform/huawei_sensor/fingersense_latch_data
     chown root system /proc/sensorhub_logbuff
 
-    # NFC
-    chown nfc nfc /sys/nfc/nfc_wired_ese_type
-    chmod 0444 /sys/nfc/nfc_wired_ese_type
-    chown nfc nfc /sys/nfc/nfc_activated_se_info
-    chmod 0664 /sys/nfc/nfc_activated_se_info
-    chown nfc nfc /sys/nfc/nfc_hal_dmd
-    chmod 0664 /sys/nfc/nfc_hal_dmd
-    chown nfc nfc /sys/nfc/nfc_calibration
-    chmod 0444 /sys/nfc/nfc_calibration
-    chown nfc nfc /sys/nfc/nfc_get_rssi
-    chmod 0664 /sys/nfc/nfc_get_rssi
-    chown nfc nfc /sys/nfc/nfc_recovery_close_nfc
-    chmod 0664 /sys/nfc/nfc_recovery_close_nfc
-
-    chown nfc nfc /sys/nfc/nfc_fwupdate
-    chmod 0664 /sys/nfc/nfc_fwupdate
-    chown nfc nfc /sys/nfc/nxp_config_name
-    chmod 0664 /sys/nfc/nxp_config_name
-    chown nfc nfc /sys/nfc/nfc_brcm_conf_name
-    chmod 0664 /sys/nfc/nfc_brcm_conf_name
-    chown nfc nfc /sys/nfc/nfc_sim_switch
-    chmod 0664 /sys/nfc/nfc_sim_switch
-    chown nfc nfc /sys/nfc/nfc_sim_status
-    chmod 0444 /sys/nfc/nfc_sim_status
-    chown nfc nfc /sys/nfc/rd_nfc_sim_status
-    chmod 0444 /sys/nfc/rd_nfc_sim_status
-    chown nfc nfc /sys/nfc/nfc_enable_status
-    chmod 0664 /sys/nfc/nfc_enable_status
-    chown nfc nfc /sys/nfc/nfc_card_num
-    chmod 0444 /sys/nfc/nfc_card_num
-    chown nfc nfc /sys/nfc/nfc_chip_type
-    chmod 0444 /sys/nfc/nfc_chip_type
-    chown nfc nfc /sys/nfc/nfc_fw_version
-    chmod 0444 /sys/nfc/nfc_fw_version
-    chown nfc nfc /sys/nfc/nfcservice_lock
-    chmod 0664 /sys/nfc/nfcservice_lock
-    chown nfc nfc /sys/nfc/nfc_svdd_sw
-    chmod 0664 /sys/nfc/nfc_svdd_sw
-    chown nfc nfc /sys/nfc/nfc_close_type
-    chmod 0664 /sys/nfc/nfc_close_type
-    chown nfc nfc /sys/nfc/nfc_single_channel
-    chmod 0444 /sys/nfc/nfc_single_channel
-    chown system nfc /sys/nfc/nfc_age_test_flag_state
-    chmod 0640 /sys/nfc/nfc_age_test_flag_state
-    chown nfc nfc /sys/nfc/nfc_wired_ese_type
-    chmod 0444 /sys/nfc/nfc_wired_ese_type
-    chown nfc nfc /sys/nfc/nfc_activated_se_info
-    chmod 0664 /sys/nfc/nfc_activated_se_info
-    chown nfc nfc /sys/nfc/nfc_switch_state
-    chmod 0664 /sys/nfc/nfc_switch_state
-    chown nfc nfc /sys/nfc/nfc_at_result
-    chmod 0664 /sys/nfc/nfc_at_result
-
     # Audio
     chmod 660 /proc/hifidsp/hifi
     chown root audio /proc/hifidsp/hifi
@@ -950,7 +893,7 @@ on property:service.bootanim.exit=1
 
 service atcmdserver /vendor/bin/atcmdserver
     class main
-    group root system nfc graphics audio camera
+    group root system graphics audio camera
     disabled
     seclabel u:r:atcmdserver:s0
 
