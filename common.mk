@@ -31,6 +31,9 @@ PRODUCT_PACKAGES += \
     libaudiopreprocessing \
     libtinycompress
 
+PRODUCT_PACKAGES += \
+    libshim_audioparams
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
