@@ -1,3 +1,4 @@
 on init
     setprop sys.usb.configfs 1
     symlink /dev/block/platform/hi_mci.0 /dev/block/bootdevice
+    symlink /dev/block/by-name/kernel /dev/block/by-name/ramdisk
