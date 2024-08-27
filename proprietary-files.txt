@@ -491,3 +491,8 @@ vendor/lib64/libkeymaster3_attestation.so
 # Thermal
 vendor/lib/hw/thermal.hi6250.so
 vendor/lib64/hw/thermal.hi6250.so
+
+# Touch
+vendor/bin/aptouch_daemon
+vendor/etc/init/aptouch_daemon.rc
+vendor/lib64/libtpp.so
