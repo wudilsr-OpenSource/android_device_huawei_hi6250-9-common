@@ -37,6 +37,14 @@ ro.config.fm.disable=false
 # GPS
 ro.hardware.hisupl=hi1102
 
+# IMS
+ro.config.hw_emcom=true
+ro.config.hw_volte_dyn=true
+ro.config.hw_volte_on=true
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Media
 debug.stagefright.ccodec=0
 

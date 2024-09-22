@@ -144,9 +144,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.1.vendor
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM)/etc/permissions)
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.hisi \
@@ -162,6 +159,12 @@ PRODUCT_PACKAGES += \
     libhwlog \
     libimonitor \
     libxcollie
+
+# IMS
+PRODUCT_BOOT_JARS += \
+    hwEmui \
+    hwframework \
+    hwTelephony-common
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -243,6 +246,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM)/etc/permissions)
 
 # Power
 PRODUCT_PACKAGES += \

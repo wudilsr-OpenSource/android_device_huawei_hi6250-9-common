@@ -317,6 +317,33 @@ vendor/lib64/vendor.huawei.hardware.gnss@1.1.so
 vendor/lib64/vendor.huawei.hardware.gnss@1.2.so
 vendor/lib64/vendor.huawei.hardware.hisupl@1.0.so
 
+# IMS
+system/emui/base/emcom/emcomctr/emcom.xml
+system/emui/base/emcom/emcomctr/smartcare.xml
+system/emui/base/emcom/emcomctr/version.txt
+system/emui/base/emcom/emcomctr/xengine.xml
+system/emui/base/emcom/noncell/bt_interop.xml
+system/emui/base/emcom/noncell/device_guide.json
+system/emui/base/emcom/noncell/version.txt
+-system/app/HwIms/HwIms.apk:system/priv-app/HwIms/HwIms.apk
+system/app/HwIms/lib/arm64/libcryptotsc.so:system/priv-app/HwIms/lib/arm64/libcryptotsc.so
+system/app/HwIms/lib/arm64/libHME-Video.so:system/priv-app/HwIms/lib/arm64/libHME-Video.so
+system/app/HwIms/lib/arm64/libhw_media.so:system/priv-app/HwIms/lib/arm64/libhw_media.so
+system/app/HwIms/lib/arm64/libhw_sys.so:system/priv-app/HwIms/lib/arm64/libhw_sys.so
+system/app/HwIms/lib/arm64/liblogin.so:system/priv-app/HwIms/lib/arm64/liblogin.so
+system/app/HwIms/lib/arm64/libmvd_hme_vt.so:system/priv-app/HwIms/lib/arm64/libmvd_hme_vt.so
+system/app/HwIms/lib/arm64/libsci.so:system/priv-app/HwIms/lib/arm64/libsci.so
+system/app/HwIms/lib/arm64/libsci_ssconf.so:system/priv-app/HwIms/lib/arm64/libsci_ssconf.so
+system/app/HwIms/lib/arm64/libsci_tls_default.so:system/priv-app/HwIms/lib/arm64/libsci_tls_default.so
+system/app/HwIms/lib/arm64/libsecurec.so:system/priv-app/HwIms/lib/arm64/libsecurec.so
+system/app/HwIms/lib/arm64/libssltsc.so:system/priv-app/HwIms/lib/arm64/libssltsc.so
+system/app/HwIms/lib/arm64/libtls_default.so:system/priv-app/HwIms/lib/arm64/libtls_default.so
+system/app/HwIms/lib/arm64/libut.so:system/priv-app/HwIms/lib/arm64/libut.so
+system/app/HwIms/lib/arm64/libvsc.so:system/priv-app/HwIms/lib/arm64/libvsc.so
+-system/framework/hwEmui.jar
+-system/framework/hwframework.jar
+-system/framework/hwTelephony-common.jar
+
 # Keystore
 vendor/lib/hw/keystore.hi6250.so
 vendor/lib/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so
