@@ -153,6 +153,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hisi_init
 
+PRODUCT_PACKAGES += \
+    hisi-fwk
+
 # Huawei (stubs)
 PRODUCT_PACKAGES += \
     libchrlog \
@@ -162,6 +165,7 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_BOOT_JARS += \
+    hisi-fwk \
     hwEmui \
     hwframework \
     hwTelephony-common

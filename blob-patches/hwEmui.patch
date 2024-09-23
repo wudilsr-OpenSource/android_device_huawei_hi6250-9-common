@@ -1,0 +1,1749 @@
+diff --git a/smali/android/app/HwActivitySplitterImpl$1.smali b/smali/android/app/HwActivitySplitterImpl$1.smali
+index 88d882d..d41bf1e 100644
+--- a/smali/android/app/HwActivitySplitterImpl$1.smali
++++ b/smali/android/app/HwActivitySplitterImpl$1.smali
+@@ -55,7 +55,7 @@
+ 
+     .line 771
+     .local v0, "isTop":Z
+-    sget-boolean v2, Landroid/util/Log;->HWLog:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -115,7 +115,7 @@
+     if-nez v2, :cond_3
+ 
+     .line 779
+-    sget-boolean v2, Landroid/util/Log;->HWLog:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+diff --git a/smali/android/app/HwActivitySplitterImpl.smali b/smali/android/app/HwActivitySplitterImpl.smali
+index e480c22..e4865bc 100644
+--- a/smali/android/app/HwActivitySplitterImpl.smali
++++ b/smali/android/app/HwActivitySplitterImpl.smali
+@@ -583,7 +583,7 @@
+     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+ 
+     .line 435
+-    sget-boolean v1, Landroid/util/Log;->HWLog:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_1
+ 
+@@ -670,7 +670,7 @@
+ 
+     .line 632
+     :cond_1
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -1219,7 +1219,7 @@
+     if-eqz v1, :cond_1
+ 
+     .line 715
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_3
+ 
+@@ -1370,7 +1370,7 @@
+     invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
+ 
+     .line 968
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+@@ -2095,7 +2095,7 @@
+     .line 1224
+     :cond_1
+     :goto_0
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -3382,7 +3382,7 @@
+     .line 840
+     .local v2, "start":Z
+     :goto_1
+-    sget-boolean v3, Landroid/util/Log;->HWLog:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_4
+ 
+@@ -3516,7 +3516,7 @@
+     .end local v2    # "start":Z
+     :cond_6
+     :goto_4
+-    sget-boolean v1, Landroid/util/Log;->HWLog:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_7
+ 
+@@ -4048,7 +4048,7 @@
+     .locals 6
+ 
+     .line 872
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -4083,7 +4083,7 @@
+     iput-boolean v0, p0, Landroid/app/HwActivitySplitterImpl;->mSplit:Z
+ 
+     .line 879
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -4180,7 +4180,7 @@
+     iput v3, v0, Landroid/view/WindowManager$LayoutParams;->height:I
+ 
+     .line 894
+-    sget-boolean v3, Landroid/util/Log;->HWLog:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_7
+ 
+@@ -4402,7 +4402,7 @@
+     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+ 
+     .line 937
+-    sget-boolean v1, Landroid/util/Log;->HWLog:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -4561,7 +4561,7 @@
+     if-eqz v0, :cond_3
+ 
+     .line 995
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+@@ -4938,7 +4938,7 @@
+ 
+     .line 1582
+     .local v0, "currentLang":Ljava/lang/String;
+-    sget-boolean v1, Landroid/util/Log;->HWLog:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -5193,7 +5193,7 @@
+     .param p1, "newConfig"    # Landroid/content/res/Configuration;
+ 
+     .line 1142
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -5248,7 +5248,7 @@
+     invoke-direct {p0}, Landroid/app/HwActivitySplitterImpl;->adjustContentIndexView()V
+ 
+     .line 1153
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -5632,7 +5632,7 @@
+     .param p1, "showing"    # Z
+ 
+     .line 357
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -5762,7 +5762,7 @@
+ 
+     .line 1447
+     :cond_0
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+@@ -5802,7 +5802,7 @@
+     if-eqz v0, :cond_4
+ 
+     .line 1451
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -6167,7 +6167,7 @@
+ 
+     .line 1329
+     :cond_0
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+@@ -6189,7 +6189,7 @@
+     if-eqz v0, :cond_3
+ 
+     .line 1334
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+@@ -6255,7 +6255,7 @@
+ 
+     .line 1346
+     :cond_5
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_6
+ 
+@@ -6402,7 +6402,7 @@
+ 
+     .line 1508
+     :cond_0
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+diff --git a/smali/android/app/hwfeature/HwFeatureManager.smali b/smali/android/app/hwfeature/HwFeatureManager.smali
+index 90d3264..cf47ab9 100644
+--- a/smali/android/app/hwfeature/HwFeatureManager.smali
++++ b/smali/android/app/hwfeature/HwFeatureManager.smali
+@@ -81,7 +81,7 @@
+     if-nez v1, :cond_1
+ 
+     .line 41
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -414,7 +414,7 @@
+     .end local v4    # "packageName":Ljava/lang/String;
+     :cond_1
+     :goto_1
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+diff --git a/smali/android/app/mtm/MultiTaskManager.smali b/smali/android/app/mtm/MultiTaskManager.smali
+index 7f4c5d1..cf0eb12 100644
+--- a/smali/android/app/mtm/MultiTaskManager.smali
++++ b/smali/android/app/mtm/MultiTaskManager.smali
+@@ -112,7 +112,7 @@
+     if-nez v1, :cond_2
+ 
+     .line 76
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_1
+ 
+@@ -927,7 +927,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 315
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -957,7 +957,7 @@
+ 
+     .line 321
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+diff --git a/smali/android/app/mtm/MultiTaskUtils.smali b/smali/android/app/mtm/MultiTaskUtils.smali
+index 67198f9..d5acc62 100644
+--- a/smali/android/app/mtm/MultiTaskUtils.smali
++++ b/smali/android/app/mtm/MultiTaskUtils.smali
+@@ -54,11 +54,11 @@
+     .locals 2
+ 
+     .line 46
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -167,7 +167,7 @@
+     if-nez v0, :cond_2
+ 
+     .line 69
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_1
+ 
+diff --git a/smali/android/emcom/SmartcareInfos$SmartcareBaseInfo.smali b/smali/android/emcom/SmartcareInfos$SmartcareBaseInfo.smali
+index 025e735..0b1dca7 100644
+--- a/smali/android/emcom/SmartcareInfos$SmartcareBaseInfo.smali
++++ b/smali/android/emcom/SmartcareInfos$SmartcareBaseInfo.smali
+@@ -46,7 +46,7 @@
+     iput-object p1, p0, Landroid/emcom/SmartcareInfos$SmartcareBaseInfo;->smarcareInfos:Landroid/emcom/SmartcareInfos;
+ 
+     .line 37
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -105,7 +105,7 @@
+     iput-object v0, p0, Landroid/emcom/SmartcareInfos$SmartcareBaseInfo;->pkgName:Ljava/lang/String;
+ 
+     .line 45
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/android/location/HwAGPSManager.smali b/smali/android/location/HwAGPSManager.smali
+index bb7c325..5f67dd4 100644
+--- a/smali/android/location/HwAGPSManager.smali
++++ b/smali/android/location/HwAGPSManager.smali
+@@ -118,11 +118,11 @@
+     .locals 2
+ 
+     .line 21
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/android/rms/HwSysResManager.smali b/smali/android/rms/HwSysResManager.smali
+index a66e7ae..ab6739f 100644
+--- a/smali/android/rms/HwSysResManager.smali
++++ b/smali/android/rms/HwSysResManager.smali
+@@ -117,7 +117,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 275
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -150,7 +150,7 @@
+ 
+     .line 282
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -183,7 +183,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 261
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -213,7 +213,7 @@
+ 
+     .line 268
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -245,7 +245,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 511
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -276,7 +276,7 @@
+ 
+     .line 518
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -307,7 +307,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 527
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -338,7 +338,7 @@
+ 
+     .line 534
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -368,7 +368,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 483
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -398,7 +398,7 @@
+ 
+     .line 490
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -430,7 +430,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 321
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -460,7 +460,7 @@
+ 
+     .line 328
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -491,7 +491,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 497
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -521,7 +521,7 @@
+ 
+     .line 504
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -552,7 +552,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 469
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -582,7 +582,7 @@
+ 
+     .line 476
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -618,7 +618,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 687
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -649,7 +649,7 @@
+ 
+     .line 694
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -685,7 +685,7 @@
+     if-nez v6, :cond_1
+ 
+     .line 704
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -728,7 +728,7 @@
+ 
+     .line 711
+     .local v0, "e":Landroid/os/RemoteException;
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_2
+ 
+@@ -769,7 +769,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 588
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -800,7 +800,7 @@
+ 
+     .line 595
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -840,7 +840,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 819
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -871,7 +871,7 @@
+ 
+     .line 826
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -911,7 +911,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 936
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -942,7 +942,7 @@
+ 
+     .line 943
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -982,7 +982,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 368
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1013,7 +1013,7 @@
+ 
+     .line 375
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1052,7 +1052,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 384
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1083,7 +1083,7 @@
+ 
+     .line 391
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1114,7 +1114,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 453
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_0
+ 
+@@ -1145,7 +1145,7 @@
+ 
+     .line 460
+     .local v3, "e":Landroid/os/RemoteException;
+-    sget-boolean v4, Landroid/util/Log;->HWINFO:Z
++    const/4 v4, 0x0
+ 
+     if-eqz v4, :cond_2
+ 
+@@ -1185,7 +1185,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 801
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1216,7 +1216,7 @@
+ 
+     .line 808
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1279,7 +1279,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 403
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1310,7 +1310,7 @@
+ 
+     .line 410
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1344,7 +1344,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 920
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1375,7 +1375,7 @@
+ 
+     .line 927
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1409,7 +1409,7 @@
+     if-nez v1, :cond_1
+ 
+     .line 147
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1440,7 +1440,7 @@
+ 
+     .line 153
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1474,7 +1474,7 @@
+     if-nez v2, :cond_1
+ 
+     .line 162
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_0
+ 
+@@ -1505,7 +1505,7 @@
+ 
+     .line 168
+     .local v3, "e":Landroid/os/RemoteException;
+-    sget-boolean v4, Landroid/util/Log;->HWINFO:Z
++    const/4 v4, 0x0
+ 
+     if-eqz v4, :cond_2
+ 
+@@ -1537,7 +1537,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 109
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1577,7 +1577,7 @@
+ 
+     .line 116
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -1618,7 +1618,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 603
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1649,7 +1649,7 @@
+ 
+     .line 610
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1681,7 +1681,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 951
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1712,7 +1712,7 @@
+ 
+     .line 958
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1745,7 +1745,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 126
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1786,7 +1786,7 @@
+ 
+     .line 136
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -1817,7 +1817,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 558
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -1847,7 +1847,7 @@
+ 
+     .line 565
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -1879,7 +1879,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 751
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1910,7 +1910,7 @@
+ 
+     .line 758
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -1942,7 +1942,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 734
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -1973,7 +1973,7 @@
+ 
+     .line 741
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -2005,7 +2005,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 572
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2036,7 +2036,7 @@
+ 
+     .line 579
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -2068,7 +2068,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 215
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2108,7 +2108,7 @@
+ 
+     .line 223
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -2143,7 +2143,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 888
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2174,7 +2174,7 @@
+ 
+     .line 895
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -2210,7 +2210,7 @@
+     if-nez v9, :cond_1
+ 
+     .line 654
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -2258,7 +2258,7 @@
+ 
+     .line 662
+     .local v0, "e":Landroid/os/RemoteException;
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_2
+ 
+@@ -2291,7 +2291,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 299
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -2321,7 +2321,7 @@
+ 
+     .line 306
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -2358,7 +2358,7 @@
+     if-nez v9, :cond_1
+ 
+     .line 247
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -2406,7 +2406,7 @@
+ 
+     .line 254
+     .local v0, "e":Landroid/os/RemoteException;
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_2
+ 
+@@ -2439,7 +2439,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 967
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -2469,7 +2469,7 @@
+ 
+     .line 974
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -2502,7 +2502,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 619
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2542,7 +2542,7 @@
+ 
+     .line 627
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -2575,7 +2575,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 180
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2615,7 +2615,7 @@
+ 
+     .line 188
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -2649,7 +2649,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 198
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -2689,7 +2689,7 @@
+ 
+     .line 206
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -2730,7 +2730,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 420
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -2760,7 +2760,7 @@
+ 
+     .line 427
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -2791,7 +2791,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 336
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -2821,7 +2821,7 @@
+ 
+     .line 343
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -2853,7 +2853,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 351
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -2883,7 +2883,7 @@
+ 
+     .line 359
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -2989,7 +2989,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 436
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -3019,7 +3019,7 @@
+ 
+     .line 443
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -3194,7 +3194,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 904
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -3224,7 +3224,7 @@
+ 
+     .line 911
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -3419,7 +3419,7 @@
+     if-nez v6, :cond_1
+ 
+     .line 543
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -3461,7 +3461,7 @@
+ 
+     .line 550
+     .local v0, "e":Landroid/os/RemoteException;
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_2
+ 
+@@ -3495,7 +3495,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 670
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -3526,7 +3526,7 @@
+ 
+     .line 677
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_2
+ 
+@@ -3608,7 +3608,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 636
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+@@ -3648,7 +3648,7 @@
+ 
+     .line 644
+     .local v2, "e":Landroid/os/RemoteException;
+-    sget-boolean v3, Landroid/util/Log;->HWINFO:Z
++    const/4 v3, 0x0
+ 
+     if-eqz v3, :cond_3
+ 
+@@ -3681,7 +3681,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 981
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -3711,7 +3711,7 @@
+ 
+     .line 988
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+@@ -3750,7 +3750,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 720
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_0
+ 
+@@ -3780,7 +3780,7 @@
+ 
+     .line 727
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+diff --git a/smali/android/rms/control/ResourceFlowControl.smali b/smali/android/rms/control/ResourceFlowControl.smali
+index a81f03c..fe5801f 100644
+--- a/smali/android/rms/control/ResourceFlowControl.smali
++++ b/smali/android/rms/control/ResourceFlowControl.smali
+@@ -536,7 +536,7 @@
+ 
+     if-nez v2, :cond_2
+ 
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_3
+ 
+diff --git a/smali/android/rms/io/IOStatsServiceManager.smali b/smali/android/rms/io/IOStatsServiceManager.smali
+index 6c38f80..a6a99e5 100644
+--- a/smali/android/rms/io/IOStatsServiceManager.smali
++++ b/smali/android/rms/io/IOStatsServiceManager.smali
+@@ -94,7 +94,7 @@
+     if-nez v0, :cond_1
+ 
+     .line 33
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -135,7 +135,7 @@
+ 
+     .line 43
+     .local v1, "e":Landroid/os/RemoteException;
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_2
+ 
+diff --git a/smali/android/rms/resource/ContentObserverResource.smali b/smali/android/rms/resource/ContentObserverResource.smali
+index 0d5e40b..9967ef3 100644
+--- a/smali/android/rms/resource/ContentObserverResource.smali
++++ b/smali/android/rms/resource/ContentObserverResource.smali
+@@ -182,7 +182,7 @@
+ 
+     .line 77
+     :cond_0
+-    sget-boolean v1, Landroid/util/Log;->HWINFO:Z
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_1
+ 
+diff --git a/smali/android/rms/resource/ReceiverResource.smali b/smali/android/rms/resource/ReceiverResource.smali
+index 1dd9a5c..bf09957 100644
+--- a/smali/android/rms/resource/ReceiverResource.smali
++++ b/smali/android/rms/resource/ReceiverResource.smali
+@@ -127,7 +127,7 @@
+ 
+     .line 73
+     .local v1, "typeID":I
+-    sget-boolean v2, Landroid/util/Log;->HWINFO:Z
++    const/4 v2, 0x0
+ 
+     if-eqz v2, :cond_0
+ 
+diff --git a/smali/android/rms/utils/Utils.smali b/smali/android/rms/utils/Utils.smali
+index b3f6c18..dd012d2 100644
+--- a/smali/android/rms/utils/Utils.smali
++++ b/smali/android/rms/utils/Utils.smali
+@@ -46,7 +46,7 @@
+     .locals 5
+ 
+     .line 49
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x3
+ 
+@@ -56,7 +56,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -84,11 +84,11 @@
+     sput-boolean v0, Landroid/rms/utils/Utils;->DEBUG:Z
+ 
+     .line 53
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/android/util/HwNormalizedSpline.smali b/smali/android/util/HwNormalizedSpline.smali
+index 75de5a3..9775327 100644
+--- a/smali/android/util/HwNormalizedSpline.smali
++++ b/smali/android/util/HwNormalizedSpline.smali
+@@ -486,7 +486,7 @@
+     .locals 4
+ 
+     .line 74
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -494,7 +494,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -523,11 +523,11 @@
+     sput-boolean v0, Landroid/util/HwNormalizedSpline;->HWDEBUG:Z
+ 
+     .line 75
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/android/zrhung/appeye/AppEyeFwkBlock.smali b/smali/android/zrhung/appeye/AppEyeFwkBlock.smali
+index 46dd9bb..0f117ff 100644
+--- a/smali/android/zrhung/appeye/AppEyeFwkBlock.smali
++++ b/smali/android/zrhung/appeye/AppEyeFwkBlock.smali
+@@ -711,7 +711,7 @@
+ 
+     .line 261
+     .local v3, "cmd":Ljava/lang/StringBuilder;
+-    sget-boolean v4, Landroid/util/Log;->HWINFO:Z
++    const/4 v4, 0x0
+ 
+     if-eqz v4, :cond_0
+ 
+@@ -860,7 +860,7 @@
+     invoke-virtual {v2, v10, v6}, Landroid/zrhung/ZrHungData;->putInt(Ljava/lang/String;I)V
+ 
+     .line 281
+-    sget-boolean v10, Landroid/util/Log;->HWINFO:Z
++    const/4 v10, 0x0
+ 
+     if-eqz v10, :cond_2
+ 
+diff --git a/smali/android/zrhung/appeye/AppEyeUiProbe$AppEyeUIPChecker.smali b/smali/android/zrhung/appeye/AppEyeUiProbe$AppEyeUIPChecker.smali
+index 8e84065..e086de3 100644
+--- a/smali/android/zrhung/appeye/AppEyeUiProbe$AppEyeUIPChecker.smali
++++ b/smali/android/zrhung/appeye/AppEyeUiProbe$AppEyeUIPChecker.smali
+@@ -1911,7 +1911,7 @@
+ 
+     .line 614
+     :goto_0
+-    sget-boolean v7, Landroid/util/Log;->HWINFO:Z
++    const/4 v7, 0x0
+ 
+     if-nez v7, :cond_4
+ 
+diff --git a/smali/android/zrhung/appeye/AppEyeUiProbe.smali b/smali/android/zrhung/appeye/AppEyeUiProbe.smali
+index 2db9258..7eb004c 100644
+--- a/smali/android/zrhung/appeye/AppEyeUiProbe.smali
++++ b/smali/android/zrhung/appeye/AppEyeUiProbe.smali
+@@ -197,7 +197,7 @@
+     .param p1, "msgDelayed"    # J
+ 
+     .line 783
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/com/huawei/device/connectivitychrlog/ChrLog.smali b/smali/com/huawei/device/connectivitychrlog/ChrLog.smali
+index 847179a..0a77671 100644
+--- a/smali/com/huawei/device/connectivitychrlog/ChrLog.smali
++++ b/smali/com/huawei/device/connectivitychrlog/ChrLog.smali
+@@ -28,7 +28,7 @@
+     sput-object v0, Lcom/huawei/device/connectivitychrlog/ChrLog;->TAG:Ljava/lang/String;
+ 
+     .line 31
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -36,7 +36,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -65,11 +65,11 @@
+     sput-boolean v0, Lcom/huawei/device/connectivitychrlog/ChrLog;->HWDBG:Z
+ 
+     .line 34
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/com/huawei/displayengine/DElog.smali b/smali/com/huawei/displayengine/DElog.smali
+index bbf7153..4c61888 100644
+--- a/smali/com/huawei/displayengine/DElog.smali
++++ b/smali/com/huawei/displayengine/DElog.smali
+@@ -24,7 +24,7 @@
+     .locals 4
+ 
+     .line 13
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -32,7 +32,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -61,11 +61,11 @@
+     sput-boolean v0, Lcom/huawei/displayengine/DElog;->DEBUG:Z
+ 
+     .line 14
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/com/huawei/displayengine/DisplayEngineDataCleaner.smali b/smali/com/huawei/displayengine/DisplayEngineDataCleaner.smali
+index 31b1e28..ac5e946 100644
+--- a/smali/com/huawei/displayengine/DisplayEngineDataCleaner.smali
++++ b/smali/com/huawei/displayengine/DisplayEngineDataCleaner.smali
+@@ -96,11 +96,11 @@
+     .locals 2
+ 
+     .line 27
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/com/huawei/displayengine/DisplayEngineDataCleanerXMLLoader.smali b/smali/com/huawei/displayengine/DisplayEngineDataCleanerXMLLoader.smali
+index 47b06c4..f0039bc 100644
+--- a/smali/com/huawei/displayengine/DisplayEngineDataCleanerXMLLoader.smali
++++ b/smali/com/huawei/displayengine/DisplayEngineDataCleanerXMLLoader.smali
+@@ -42,7 +42,7 @@
+     .locals 4
+ 
+     .line 26
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -50,7 +50,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -79,11 +79,11 @@
+     sput-boolean v0, Lcom/huawei/displayengine/DisplayEngineDataCleanerXMLLoader;->HWDEBUG:Z
+ 
+     .line 27
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/com/huawei/displayengine/HwXmlElement.smali b/smali/com/huawei/displayengine/HwXmlElement.smali
+index 989a66c..7acd18c 100644
+--- a/smali/com/huawei/displayengine/HwXmlElement.smali
++++ b/smali/com/huawei/displayengine/HwXmlElement.smali
+@@ -53,7 +53,7 @@
+     iput-object v0, p0, Lcom/huawei/displayengine/HwXmlElement;->TAG:Ljava/lang/String;
+ 
+     .line 29
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -61,7 +61,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -90,11 +90,11 @@
+     iput-boolean v0, p0, Lcom/huawei/displayengine/HwXmlElement;->HWDEBUG:Z
+ 
+     .line 30
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/com/huawei/displayengine/HwXmlParser.smali b/smali/com/huawei/displayengine/HwXmlParser.smali
+index e03a77a..04555be 100644
+--- a/smali/com/huawei/displayengine/HwXmlParser.smali
++++ b/smali/com/huawei/displayengine/HwXmlParser.smali
+@@ -24,7 +24,7 @@
+     .locals 4
+ 
+     .line 27
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -32,7 +32,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -61,11 +61,11 @@
+     sput-boolean v0, Lcom/huawei/displayengine/HwXmlParser;->HWDEBUG:Z
+ 
+     .line 28
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/com/huawei/hsm/permission/StubController.smali b/smali/com/huawei/hsm/permission/StubController.smali
+index 3527b12..f4e708d 100644
+--- a/smali/com/huawei/hsm/permission/StubController.smali
++++ b/smali/com/huawei/hsm/permission/StubController.smali
+@@ -1256,7 +1256,7 @@
+ 
+     .line 536
+     .local v9, "preCheckCode":I
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_1
+ 
+@@ -1472,7 +1472,7 @@
+     move v7, v0
+ 
+     .line 566
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_7
+ 
+diff --git a/smali/com/huawei/hwperformance/HwPerformanceImpl.smali b/smali/com/huawei/hwperformance/HwPerformanceImpl.smali
+index 8848104..c3245aa 100644
+--- a/smali/com/huawei/hwperformance/HwPerformanceImpl.smali
++++ b/smali/com/huawei/hwperformance/HwPerformanceImpl.smali
+@@ -59,13 +59,13 @@
+     sput-object v0, Lcom/huawei/hwperformance/HwPerformanceImpl;->B_CORE_CPUS:Ljava/lang/String;
+ 
+     .line 49
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/huawei/android/app/admin/TransactionSponsor.smali b/smali/huawei/android/app/admin/TransactionSponsor.smali
+index d2b4dbf..4229f10 100644
+--- a/smali/huawei/android/app/admin/TransactionSponsor.smali
++++ b/smali/huawei/android/app/admin/TransactionSponsor.smali
+@@ -16,11 +16,11 @@
+     .locals 2
+ 
+     .line 21
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/huawei/android/security/facerecognition/utils/LogUtil.smali b/smali/huawei/android/security/facerecognition/utils/LogUtil.smali
+index 5eb5796..fa4bcf5 100644
+--- a/smali/huawei/android/security/facerecognition/utils/LogUtil.smali
++++ b/smali/huawei/android/security/facerecognition/utils/LogUtil.smali
+@@ -20,7 +20,7 @@
+     .locals 4
+ 
+     .line 18
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     const/4 v1, 0x1
+ 
+@@ -28,7 +28,7 @@
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+@@ -57,11 +57,11 @@
+     sput-boolean v0, Lhuawei/android/security/facerecognition/utils/LogUtil;->HWDBG:Z
+ 
+     .line 19
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_3
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_2
+ 
+diff --git a/smali/huawei/android/ukey/UKeyManagerImpl.smali b/smali/huawei/android/ukey/UKeyManagerImpl.smali
+index 531ac8c..7361a45 100644
+--- a/smali/huawei/android/ukey/UKeyManagerImpl.smali
++++ b/smali/huawei/android/ukey/UKeyManagerImpl.smali
+@@ -36,7 +36,7 @@
+     .locals 1
+ 
+     .line 24
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     sput-boolean v0, Lhuawei/android/ukey/UKeyManagerImpl;->DEBUG:Z
+ 
+diff --git a/smali/huawei/android/utils/HwCoreServicesLog.smali b/smali/huawei/android/utils/HwCoreServicesLog.smali
+index b09b285..7ae76ee 100644
+--- a/smali/huawei/android/utils/HwCoreServicesLog.smali
++++ b/smali/huawei/android/utils/HwCoreServicesLog.smali
+@@ -26,11 +26,11 @@
+     .locals 2
+ 
+     .line 36
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/huawei/android/utils/HwEyeProtectionSplineImpl.smali b/smali/huawei/android/utils/HwEyeProtectionSplineImpl.smali
+index c148819..4bbda27 100644
+--- a/smali/huawei/android/utils/HwEyeProtectionSplineImpl.smali
++++ b/smali/huawei/android/utils/HwEyeProtectionSplineImpl.smali
+@@ -50,11 +50,11 @@
+     .locals 2
+ 
+     .line 66
+-    sget-boolean v0, Landroid/util/Log;->HWINFO:Z
++    const/4 v0, 0x0
+ 
+     if-nez v0, :cond_1
+ 
+-    sget-boolean v0, Landroid/util/Log;->HWModuleLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/huawei/com/android/internal/policy/PressGestureDetector.smali b/smali/huawei/com/android/internal/policy/PressGestureDetector.smali
+index a0da921..c880bb9 100644
+--- a/smali/huawei/com/android/internal/policy/PressGestureDetector.smali
++++ b/smali/huawei/com/android/internal/policy/PressGestureDetector.smali
+@@ -729,7 +729,7 @@
+     .param p2, "msg"    # Ljava/lang/String;
+ 
+     .line 527
+-    sget-boolean v0, Landroid/util/Log;->HWLog:Z
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
