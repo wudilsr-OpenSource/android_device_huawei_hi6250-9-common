@@ -246,4 +246,7 @@
 
     <!-- True if the device supports Sustained Performance Mode -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
+    <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name. -->
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName">com.google.sensor.color</string>
 </resources>
