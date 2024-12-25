@@ -132,6 +132,9 @@ include device/hisi/sepolicy/SEPolicy.mk
 # SPL
 VENDOR_SECURITY_PATCH := 2022-01-01 # ANE-LGRP2-OVS 9.1.0.401
 
+# USB
+TARGET_USES_USB_GADGET_HAL := true
+
 # Vintf
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
