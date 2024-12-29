@@ -136,7 +136,11 @@ VENDOR_SECURITY_PATCH := 2022-01-01 # ANE-LGRP2-OVS 9.1.0.401
 TARGET_USES_USB_GADGET_HAL := true
 
 # Vintf
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/configs/hidl/device_framework_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/configs/hidl/manifest.xml
 
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := true
