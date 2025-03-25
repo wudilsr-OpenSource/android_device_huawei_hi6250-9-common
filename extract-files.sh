@@ -84,12 +84,6 @@ function blob_fixup() {
         vendor/lib*/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
-        vendor/etc/libnfc-brcm.conf)
-            sed -i 's\/data/nfc\/data/vendor/nfc\g' "${2}"
-            ;;
-        vendor/etc/libnfc-nxp.conf)
-            sed -i 's|libpn551_fw_10_05_03_64bits.so|libpn551_fw.so|g' "${2}"
-            ;;
         vendor/etc/init/android.hardware.secure_element@1.0-service.rc)
             sed -i 's/android.hardware.secure_element@1.0-service/android.hardware.secure_element@1.0-service.hisi/g' "${2}"
             ;;

@@ -34,7 +34,6 @@ dontaudit system_server secure_element:process getattr;
 dontaudit system_server untrusted_app_30:process getattr;
 dontaudit system_server vold:process getattr;
 dontaudit system_server mediaprovider:process getattr;
-dontaudit system_server nfc:process getattr;
 dontaudit system_server untrusted_app_29:process getattr;
 dontaudit system_server bluetooth:process getattr;
 dontaudit system_server keystore:process getattr;
