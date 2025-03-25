@@ -21,10 +21,6 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PACKAGES += \
     fastbootd
 
-# IME Input
-PRODUCT_PACKAGES += \
-    libjni_latinimegoogle
-
 # Power
 PRODUCT_PACKAGES += \
      android.hardware.power-service.pixel-libperfmgr

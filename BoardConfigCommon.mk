@@ -88,8 +88,10 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # clang-r450784d = Kernel Android 13
-TARGET_KERNEL_CLANG_VERSION := r416183b1
-TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_CLANG_VERSION := r416183b
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_LLVM_BINUTILS := false
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Bluetooth
 BOARD_USES_LIBBT_WRAPPER := true
