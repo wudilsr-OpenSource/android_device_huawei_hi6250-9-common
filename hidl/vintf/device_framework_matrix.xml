@@ -467,6 +467,14 @@
             <instance>default</instance>
         </interface>
      </hal>
+     <hal format="aidl" optional="true">
+         <name>android.hardware.drm</name>
+         <version>1</version>
+         <interface>
+             <name>IDrmFactory</name>
+             <instance>clearkey</instance>
+         </interface>
+     </hal>
      <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
@@ -491,6 +499,14 @@
        </interface>
      </hal>
      <hal format="aidl" optional="true">
+         <name>android.hardware.light</name>
+         <version>2</version>
+         <interface>
+             <name>ILights</name>
+             <instance>default</instance>
+         </interface>
+     </hal>
+     <hal format="aidl" optional="true">
      <name>android.hardware.wifi.hostapd</name>
      <interface>
         <name>IHostapd</name>
@@ -512,6 +528,22 @@
         <instance>default</instance>
     </interface>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+         <name>android.hardware.power</name>
+         <version>3</version>
+         <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+         </interface>
+    </hal>
     <hal format="hidl" optional="true">
        <name>android.hardware.secure_element</name>
        <transport>hwbinder</transport>
@@ -529,13 +561,5 @@
             <name>IHealth</name>
             <instance>default</instance>
         </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.light</name>
-        <interface>
-            <name>ILights</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>ILights/default</fqname>
     </hal>
 </compatibility-matrix>
