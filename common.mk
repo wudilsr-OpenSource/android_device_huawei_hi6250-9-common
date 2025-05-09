@@ -316,6 +316,12 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils
 
+# RILD
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2.vendor
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
