@@ -60,8 +60,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/hidl/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/hidl/vintf/compatibility_matrix.xml
 
-
-
 # Kernel (boot)
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_HAS_RAMDISK := false
@@ -72,7 +70,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECVENDORIMAGE_PARTITION_SIZE := 16777216
-
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00478000
@@ -87,11 +84,9 @@ KERNEL_SUPPORTS_LLVM_TOOLS := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
-# clang-r450784d = Kernel Android 13
+# clang
 TARGET_KERNEL_CLANG_VERSION := r416183b
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
-TARGET_KERNEL_LLVM_BINUTILS := false
-TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
 # Bluetooth
 BOARD_USES_LIBBT_WRAPPER := true
@@ -116,14 +111,11 @@ TARGET_BOARD_PLATFORM := hi6250
 TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/properties/system.prop
 
-
-
 # Recovery
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.hi6250
 TARGET_RECOVERY_DEVICE_MODULES := init_hisi
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
@@ -159,5 +151,3 @@ endif
 
 # Inherit the proprietary files
 include vendor/huawei/hi6250-9-common/BoardConfigVendor.mk
-
-
