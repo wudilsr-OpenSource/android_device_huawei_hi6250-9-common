@@ -220,6 +220,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    libwifi-hal\
     libshim_binder \
     android.hardware.wifi@1.2.vendor \
     android.hardware.wifi.hostapd@1.0.vendor \
