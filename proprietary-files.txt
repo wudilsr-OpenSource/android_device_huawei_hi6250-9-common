@@ -509,7 +509,9 @@ vendor/phone.prop
 vendor/bin/hostapd_hisi
 vendor/bin/wpa_cli_hisi
 vendor/bin/wpa_supplicant_hisi
+vendor/lib/libwifi_bcm.so
 vendor/lib64/libhwwifi-hal.so
+vendor/lib64/libwifi_bcm.so
 vendor/lib64/libwifi_wapi_hisi.so
 vendor/lib64/libwifi_ext.default.so
 vendor/lib64/vendor.huawei.hardware.wifi.supplicant@2.0.so
