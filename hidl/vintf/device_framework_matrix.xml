@@ -30,7 +30,15 @@
         </interface>
         <fqname>@1.1::IRadio/slot1</fqname>
         <fqname>@1.1::IRadio/slot2</fqname>
-   </hal>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.power.stats</name>
+        <version>1.0</version>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>vendor.huawei.hardware.activity_recognition</name>
         <transport>hwbinder</transport>
