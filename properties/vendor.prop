@@ -128,6 +128,9 @@ ro.hwui.r_buffer_cache_size=8
 # MMU
 ro.config.mmu_en=1
 
+# WIFI
+ro.boot.wificountrycode=CN
+
 # RIL
 ro.config.ipv4.mtu=1400
 bastet.service.enable=true
