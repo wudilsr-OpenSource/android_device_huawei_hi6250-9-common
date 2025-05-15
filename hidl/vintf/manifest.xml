@@ -78,6 +78,8 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::IAllocator/default</fqname>
+        <fqname>@3.0::IAllocator/default</fqname>
+        <fqname>@4.0::IAllocator/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
