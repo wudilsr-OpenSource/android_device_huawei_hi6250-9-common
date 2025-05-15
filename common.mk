@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-     android.hardware.power-service.pixel-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power.stats@1.0-service.mock
 
 # Control groups and task profiles (vndk 28)
 PRODUCT_COPY_FILES += \
