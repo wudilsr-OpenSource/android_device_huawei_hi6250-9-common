@@ -104,11 +104,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.biometrics.fingerprint@2.1.vendor
 
-# FM
-PRODUCT_PACKAGES += \
-    FMApp2-Hisi \
-    hisi.fmradio
-
 # Folio
 PRODUCT_PACKAGES += \
     folio_daemon
