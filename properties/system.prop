@@ -1,3 +1,16 @@
 # Wifi
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
+
+# Telephony
+ro.telephony.default_network=9
+ro.dual.sim.phone=true
+ro.ril.ecclist=112,911,#911,*911
+ro.config.hw_volte_on=true
+ro.config.hw_volte_dyn=true
+ro.config.hw_vtlte_on=true
+ro.config.hw_srlte=true
+ro.hw.sub1_disable_switch_cs=true
+
+# VM
+sys.sysctl.extra_free_kbytes=61440
