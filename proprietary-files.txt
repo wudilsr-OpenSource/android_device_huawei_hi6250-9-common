@@ -299,7 +299,6 @@ vendor/firmware/hifi_6402_2wake.img
 vendor/firmware/hifi_6402_tas2smartpa.img
 vendor/firmware/hifi_6402_tas4smartpa.img
 vendor/firmware/isp_bw.elf
-vendor/firmware/isp_dts.img
 vendor/firmware/isp_fw.elf
 vendor/firmware/libpn548ad_fw.so
 vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so
