@@ -28,6 +28,9 @@ on early-boot
     # create Ext SDcard mountpoint
     mkdir /mnt/media_rw 0750 media_rw media_rw
 
+    # The balong RIL packs it into AT^USERAGENTCFG together with the build id
+    setprop ro.hw.oemName ${ro.boot.product.hardware.sku}
+
 on init
     symlink /dev/block/platform/hi_mci.0 /dev/block/bootdevice
 
