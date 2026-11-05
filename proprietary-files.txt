@@ -277,9 +277,12 @@ vendor/firmware/ts/venus_synaptics_VENS11130_boe.img
 vendor/firmware/ts/venus_synaptics_VENS11140_ebbg.img
 vendor/firmware/ts/venus_synaptics_VENS18100_lg.img
 vendor/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd
+vendor/firmware/cr4_regmem.bin
+vendor/firmware/cr4_regmem_u1.bin
 vendor/firmware/fw_bcm43455_apsta_hw.bin
 vendor/firmware/fw_bcm43455_hw.bin
 vendor/firmware/fw_bcm43455_test_hw_apsta.bin
+vendor/firmware/isp_bw.elf
 vendor/firmware/libpn548ad_fw.so
 vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so
 vendor/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so
@@ -432,6 +435,11 @@ vendor/lib/ese_hw_hal.so
 vendor/lib64/ese_hw_hal.so
 
 # Modem
+vendor/etc/modemConfig/balong/basic_name
+vendor/etc/modemConfig/viacbp82d_shutdown_log.bcfg
+vendor/etc/modemConfig/viacbp82d_log.bcfg
+vendor/etc/modemConfig/VIA/basic_name
+vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg
 vendor/modem/modem_fw/readme.txt
 
 # OEMInfo
