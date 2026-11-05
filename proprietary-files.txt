@@ -1,5 +1,5 @@
 #
-# Vendor Blobs for hi6250-common - ANE-LGRP2-OVS 9.1.0.401
+# Vendor Blobs for hi6250-common - AGS2-LGRP5-CHN 2.0.0.230
 #
 #
 
@@ -387,7 +387,7 @@ vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
 vendor/lib64/hw/mediacomm.hi6250.so
 vendor/lib64/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so
 
-# DRM (ANE-LX1 support only L3)
+# DRM (AGS2-W09HN support only L3)
 preavs/bin/hw/android.hardware.drm@1.1-service.widevine:vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 preavs/etc/init/android.hardware.drm@1.1-service.widevine.rc:vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 preavs/lib/libwvhidl.so:vendor/lib/libwvhidl.so

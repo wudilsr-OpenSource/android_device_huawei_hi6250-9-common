@@ -139,7 +139,7 @@ BOARD_ROOT_EXTRA_FOLDERS += \
 include device/hisi/sepolicy/SEPolicy.mk
 
 # Vendor
-VENDOR_SECURITY_PATCH := 2022-01-01 # ANE-LGRP2-OVS 9.1.0.401
+VENDOR_SECURITY_PATCH := 2022-02-01 # AGS2-LGRP5-CHN 2.0.0.230
 
 ## Wi-Fi
 ifneq ($(BOARD_HAVE_WIFI),false)
