@@ -84,6 +84,10 @@ function blob_fixup() {
         vendor/lib*/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc)
+            sed -i '/setenv LD_LIBRARY_PATH \/vendor\/preavs\/lib:\/vendor\/wv_lib/d' "${2}"
+            sed -i 's|/vendor/preavs/bin/hw/|/vendor/bin/hw/|g' "${2}"
+            ;;
         vendor/etc/init/android.hardware.secure_element@1.0-service.rc)
             sed -i 's/android.hardware.secure_element@1.0-service/android.hardware.secure_element@1.0-service.hisi/g' "${2}"
             ;;
