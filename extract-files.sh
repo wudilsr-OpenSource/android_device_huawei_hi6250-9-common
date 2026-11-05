@@ -60,14 +60,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-       vendor/lib*/hw/audio.primary.hi6250.so|vendor/lib*/libhivwservice.so|vendor/lib*/hw/audio.primary_hisi.hi6250.so)
+       vendor/lib*/hw/audio.primary.hi6250.so|vendor/lib*/hw/audio.primary_hisi.hi6250.so)
 	    "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
 	    ;;
 	vendor/lib*/hw/gralloc.hi6250.so)
 	    "${PATCHELF}" --add-needed "libhidlbase.so" "${2}"
-	    ;;
-	vendor/lib*/libcamera_algo.so)
-	    "${PATCHELF}" --add-needed "libshim_ui.so" "${2}"
 	    ;;
 	vendor/lib*/libxcollie.so)
 	    "${PATCHELF}" --add-needed "libunwindstack_v28.so" "${2}"

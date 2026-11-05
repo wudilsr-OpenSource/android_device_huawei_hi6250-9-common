@@ -36,7 +36,6 @@ vendor/lib64/libbt-vendor-hisi.so
 # Camera
 vendor/bin/CameraDaemon
 vendor/lib/hw/CameraFactoryService.so
-vendor/lib/hw/hicam.hal.bz.so
 vendor/lib/hw/hicam.hal.service.so
 vendor/lib/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
 vendor/lib/hwcam/hwcam.ddt.so
@@ -81,7 +80,6 @@ vendor/lib/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib/vendor.huawei.hardware.hwfactoryinterface@1.0.so
 vendor/lib/vendor.huawei.hardware.hwfactoryinterface@1.1.so
 vendor/lib64/hw/CameraFactoryService.so
-vendor/lib64/hw/hicam.hal.bz.so
 vendor/lib64/hw/hicam.hal.service.so
 vendor/lib64/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
 vendor/lib64/hwcam/hwcam.ddt.so
@@ -91,7 +89,6 @@ vendor/lib64/libFaceBeautyMeiwo.so
 vendor/lib64/libHW_BShutter.so
 vendor/lib64/libSmartAE.so
 vendor/lib64/libVideoDenoise.so
-vendor/lib64/libcamera_algo.so
 vendor/lib64/libcamera_ivp.so
 vendor/lib64/libcamerabuffer.so
 vendor/lib64/libcontrastCal.so
@@ -244,7 +241,6 @@ vendor/lib64/vendor.huawei.hardware.hwvibrator@1.0.so
 vendor/lib64/vendor.huawei.hardware.iawareperf@1.0.so
 vendor/lib64/libiawareperf_client.so
 
-
 # FM Radio
 -lib/libHidlUtil.so
 -lib/libfm_jni.so:lib/libfm_jni.so
@@ -259,7 +255,6 @@ vendor/lib/vendor.huawei.hardware.fm@1.0.so
 vendor/lib64/hw/fm.hisi.hi6250.so
 vendor/lib64/vendor.huawei.hardware.fm@1.0-impl.so:vendor/lib64/hw/vendor.huawei.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.huawei.hardware.fm@1.0.so
-
 
 # Firmware
 vendor/firmware/ts/Nemo_CS445A_default.bin
@@ -282,24 +277,9 @@ vendor/firmware/ts/venus_synaptics_VENS11130_boe.img
 vendor/firmware/ts/venus_synaptics_VENS11140_ebbg.img
 vendor/firmware/ts/venus_synaptics_VENS18100_lg.img
 vendor/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd
-vendor/firmware/CPU_RAM_SCHED.bin
-vendor/firmware/CPU_RAM_WBS.bin
-vendor/firmware/Total.wdk
-vendor/firmware/bfgx_and_wifi_cfg
-vendor/firmware/bfgx_cfg
-vendor/firmware/cr4_asic.bin
-vendor/firmware/cr4_regmem.bin
-vendor/firmware/cr4_regmem_u1.bin
 vendor/firmware/fw_bcm43455_apsta_hw.bin
 vendor/firmware/fw_bcm43455_hw.bin
 vendor/firmware/fw_bcm43455_test_hw_apsta.bin
-vendor/firmware/hifi_6402.img
-vendor/firmware/hifi_6402_2spk.img
-vendor/firmware/hifi_6402_2wake.img
-vendor/firmware/hifi_6402_tas2smartpa.img
-vendor/firmware/hifi_6402_tas4smartpa.img
-vendor/firmware/isp_bw.elf
-vendor/firmware/isp_fw.elf
 vendor/firmware/libpn548ad_fw.so
 vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so
 vendor/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so
@@ -307,7 +287,6 @@ vendor/firmware/libpn551_fw_10_05_03_64bits.so
 vendor/firmware/nvram43455_hw.txt
 vendor/firmware/nvram43455_hw_vn1.txt
 vendor/firmware/ram_reg_test_cfg
-vendor/firmware/wifi_cfg
 
 # GPS
 vendor/bin/hw/vendor.huawei.hardware.gnss@1.2-service
@@ -430,7 +409,6 @@ vendor/lib/libc_secshared.so
 vendor/lib/libconn_factory_test.so
 vendor/lib/libfaccommon_share.so
 vendor/lib/libfacsignedapi_share.so
-vendor/lib/libhivwservice.so
 vendor/lib/libhuaweicust.so
 vendor/lib/libjtag_wdt_ctrl.so
 vendor/lib/libnvme.so
@@ -442,7 +420,6 @@ vendor/lib64/libc_secshared.so
 vendor/lib64/libconn_factory_test.so
 vendor/lib64/libfaccommon_share.so
 vendor/lib64/libfacsignedapi_share.so
-vendor/lib64/libhivwservice.so
 vendor/lib64/libhuaweicust.so
 vendor/lib64/libjtag_wdt_ctrl.so
 vendor/lib64/libnvme.so
@@ -455,14 +432,6 @@ vendor/lib/ese_hw_hal.so
 vendor/lib64/ese_hw_hal.so
 
 # Modem
-vendor/etc/modemConfig/balong/basic_name
-vendor/etc/modemConfig/balong/FieldTest.cfg
-vendor/etc/modemConfig/viacbp82d_shutdown_log.bcfg
-vendor/etc/modemConfig/hids_ue_msg.cfg
-vendor/etc/modemConfig/viacbp82d_log.bcfg
-vendor/etc/modemConfig/VIA/basic_name
-vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg
-vendor/etc/factory_modem.cfg
 vendor/modem/modem_fw/readme.txt
 
 # OEMInfo
@@ -502,7 +471,6 @@ vendor/lib64/vendor.huawei.hardware.radio@2.0.so
 vendor/lib64/vendor.huawei.hardware.radio.chr@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.deprecated@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.ims@1.0.so
-vendor/phone.prop
 
 # Wifi
 vendor/bin/hostapd_hisi
