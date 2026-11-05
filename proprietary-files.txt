@@ -1,10 +1,9 @@
 #
 # Vendor Blobs for hi6250-common - ANE-LGRP2-OVS 9.1.0.401
-# 
+#
 #
 
 # Audio Hardware
-vendor/lib64/hw/audio.primary.hisi.so:vendor/lib64/hw/audio.primary.hi6250.so
 vendor/lib64/libasd.so
 vendor/lib64/libaudio_custom.so
 vendor/lib64/libaudiodump.so
@@ -13,16 +12,17 @@ vendor/lib64/librttserver.so
 vendor/lib64/libsmartpakit.so
 vendor/lib64/libtas2560.so
 vendor/lib64/vendor.huawei.hardware.rtt@1.0.so
+vendor/lib64/hw/audio.primary.hisi.so:vendor/lib64/hw/audio.primary.hi6250.so
 
 # Audio Effects (Huawei effect)
+# vendor/lib/soundfx/libswdap.so
+# vendor/lib64/soundfx/libswdap.so
 vendor/lib/libhuaweiaudioeffectutil.so
 vendor/lib/soundfx/libhuaweiprocessing.so
 vendor/lib/soundfx/liboffloadvisualizer.so
-# vendor/lib/soundfx/libswdap.so
 vendor/lib64/libhuaweiaudioeffectutil.so
 vendor/lib64/soundfx/libhuaweiprocessing.so
 vendor/lib64/soundfx/liboffloadvisualizer.so
-# vendor/lib64/soundfx/libswdap.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.hi6250.so
@@ -30,16 +30,11 @@ vendor/lib64/hw/gatekeeper.hi6250.so
 
 # Bluetooth
 vendor/etc/bluetooth/bt_vendor.conf
-vendor/lib64/libbt-vendor.so:vendor/lib64/libbt-vendor-bcm.so
 vendor/lib64/libbt-vendor-hisi.so
+vendor/lib64/libbt-vendor.so:vendor/lib64/libbt-vendor-bcm.so
 
 # Camera
 vendor/bin/CameraDaemon
-vendor/lib/hw/CameraFactoryService.so
-vendor/lib/hw/hicam.hal.service.so
-vendor/lib/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
-vendor/lib/hwcam/hwcam.ddt.so
-vendor/lib/hwcam/hwcam.services.so
 vendor/lib/libBestShot.so
 vendor/lib/libFaceBeautyMeiwo.so
 vendor/lib/libHW_BShutter.so
@@ -79,11 +74,11 @@ vendor/lib/vendor.huawei.hardware.camera.factory@1.0.so
 vendor/lib/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib/vendor.huawei.hardware.hwfactoryinterface@1.0.so
 vendor/lib/vendor.huawei.hardware.hwfactoryinterface@1.1.so
-vendor/lib64/hw/CameraFactoryService.so
-vendor/lib64/hw/hicam.hal.service.so
-vendor/lib64/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
-vendor/lib64/hwcam/hwcam.ddt.so
-vendor/lib64/hwcam/hwcam.services.so
+vendor/lib/hw/CameraFactoryService.so
+vendor/lib/hw/hicam.hal.service.so
+vendor/lib/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
+vendor/lib/hwcam/hwcam.ddt.so
+vendor/lib/hwcam/hwcam.services.so
 vendor/lib64/libBestShot.so
 vendor/lib64/libFaceBeautyMeiwo.so
 vendor/lib64/libHW_BShutter.so
@@ -127,6 +122,11 @@ vendor/lib64/vendor.huawei.hardware.camera.factory@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.gpucommon@1.0.so
 vendor/lib64/vendor.huawei.hardware.hwfactoryinterface@1.0.so
 vendor/lib64/vendor.huawei.hardware.hwfactoryinterface@1.1.so
+vendor/lib64/hw/CameraFactoryService.so
+vendor/lib64/hw/hicam.hal.service.so
+vendor/lib64/hw/vendor.huawei.hardware.camera.factory@1.0-impl.so
+vendor/lib64/hwcam/hwcam.ddt.so
+vendor/lib64/hwcam/hwcam.services.so
 
 # Camera Configs
 vendor/etc/camera/bshutter/default/algo.xml
@@ -174,8 +174,8 @@ vendor/etc/camera/hwscope/default/kernel
 vendor/etc/camera/libcl/opticalzoom_source.bin
 vendor/etc/camera/libcl/wideAperture.bin
 vendor/etc/camera/mmi7cm/default/mmi7cmConfig.xml
-vendor/etc/camera/multidenoise/default/multiframe.xml
 vendor/etc/camera/multidenoise/multidenoise.xml
+vendor/etc/camera/multidenoise/default/multiframe.xml
 vendor/etc/camera/nicefood/default/niceFood.dat
 vendor/etc/camera/opticalzoom/default/hwnie.xml
 vendor/etc/camera/opticalzoom/default/hwnie_co.xml
@@ -223,23 +223,23 @@ vendor/lib64/libpf_rotate_hisi.so
 # Fingerprint
 vendor/bin/hw/vendor.huawei.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/vendor.huawei.hardware.biometrics.fingerprint@2.1-service.rc
-vendor/lib/hw/fingerprint.hi6250.so
 vendor/lib/lib_fpc_tac_shared.so
 vendor/lib/libfaccommon_share.so
 vendor/lib/libfacsignedapi_share.so
-vendor/lib64/hw/fingerprint.hi6250.so
+vendor/lib/hw/fingerprint.hi6250.so
 vendor/lib64/lib_fpc_tac_shared.so
 vendor/lib64/libfaccommon_share.so
 vendor/lib64/libfacsignedapi_share.so
+vendor/lib64/hw/fingerprint.hi6250.so
 vendor/usr/idc/fingerprint.idc
 
 # Misc
+vendor/lib/libiawareperf_client.so
 vendor/lib/vendor.huawei.hardware.hwvibrator@1.0.so
 vendor/lib/vendor.huawei.hardware.iawareperf@1.0.so
-vendor/lib/libiawareperf_client.so
+vendor/lib64/libiawareperf_client.so
 vendor/lib64/vendor.huawei.hardware.hwvibrator@1.0.so
 vendor/lib64/vendor.huawei.hardware.iawareperf@1.0.so
-vendor/lib64/libiawareperf_client.so
 
 # FM Radio
 -lib/libHidlUtil.so
@@ -250,13 +250,27 @@ vendor/lib64/libiawareperf_client.so
 -lib64/vendor.huawei.hardware.fm@1.0.so;MODULE=vendor_huawei_fm_system
 vendor/bin/hw/vendor.huawei.hardware.fm@1.0-service
 vendor/etc/init/vendor.huawei.hardware.fm@1.0-service.rc
-vendor/lib/hw/fm.hisi.hi6250.so
 vendor/lib/vendor.huawei.hardware.fm@1.0.so
-vendor/lib64/hw/fm.hisi.hi6250.so
+vendor/lib/hw/fm.hisi.hi6250.so
 vendor/lib64/vendor.huawei.hardware.fm@1.0-impl.so:vendor/lib64/hw/vendor.huawei.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.huawei.hardware.fm@1.0.so
+vendor/lib64/hw/fm.hisi.hi6250.so
 
 # Firmware
+vendor/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd
+vendor/firmware/cr4_regmem.bin
+vendor/firmware/cr4_regmem_u1.bin
+vendor/firmware/fw_bcm43455_apsta_hw.bin
+vendor/firmware/fw_bcm43455_hw.bin
+vendor/firmware/fw_bcm43455_test_hw_apsta.bin
+vendor/firmware/isp_bw.elf
+vendor/firmware/libpn548ad_fw.so
+vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so
+vendor/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so
+vendor/firmware/libpn551_fw_10_05_03_64bits.so
+vendor/firmware/nvram43455_hw.txt
+vendor/firmware/nvram43455_hw_vn1.txt
+vendor/firmware/ram_reg_test_cfg
 vendor/firmware/ts/Nemo_CS445A_default.bin
 vendor/firmware/ts/Nemo_CS445A_junda.bin
 vendor/firmware/ts/berlin_auo_ili9885.bin
@@ -276,58 +290,38 @@ vendor/firmware/ts/venus_synaptics_VENS11120_cmi.img
 vendor/firmware/ts/venus_synaptics_VENS11130_boe.img
 vendor/firmware/ts/venus_synaptics_VENS11140_ebbg.img
 vendor/firmware/ts/venus_synaptics_VENS18100_lg.img
-vendor/firmware/BCM4345C0_003.001.025.0033.0000_Generic.hcd
-vendor/firmware/cr4_regmem.bin
-vendor/firmware/cr4_regmem_u1.bin
-vendor/firmware/fw_bcm43455_apsta_hw.bin
-vendor/firmware/fw_bcm43455_hw.bin
-vendor/firmware/fw_bcm43455_test_hw_apsta.bin
-vendor/firmware/isp_bw.elf
-vendor/firmware/libpn548ad_fw.so
-vendor/firmware/libpn548ad_fw_10.01.1C_64bits.so
-vendor/firmware/libpn548ad_fw_10_01_1A_prod_slalm_64bits.so
-vendor/firmware/libpn551_fw_10_05_03_64bits.so
-vendor/firmware/nvram43455_hw.txt
-vendor/firmware/nvram43455_hw_vn1.txt
-vendor/firmware/ram_reg_test_cfg
 
 # GPS
-vendor/bin/hw/vendor.huawei.hardware.gnss@1.2-service
-vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
 vendor/bin/gnss_control_hisi
 vendor/bin/gnss_engine_hisi
 vendor/bin/gnss_supl20clientd_hisi
 vendor/bin/gnss_watchlssd_thirdparty
 vendor/bin/gpsdaemon
+vendor/bin/hw/vendor.huawei.hardware.gnss@1.2-service
+vendor/bin/hw/vendor.huawei.hardware.hisupl@1.0-service
+vendor/etc/geoloc.conf
+vendor/etc/gnss/gnss_lss_thirdparty.conf
+vendor/etc/gnss/config/gnss_lss_config_thirdparty.bin
 vendor/etc/gnss/config/gnss_lss_rfg_key_thirdparty.pem
 vendor/etc/gnss/config/gnss_lss_slp_thirdparty.p12
 vendor/etc/gnss/config/gnss_suplconfig_hisi.xml
-vendor/etc/gnss/config/gnss_lss_config_thirdparty.bin
-vendor/etc/gnss/rmd/g/aindex.bin
-vendor/etc/gnss/rmd/g/a_1
-vendor/etc/gnss/rmd/e/aindex.bin
-vendor/etc/gnss/rmd/e/a_1
-vendor/etc/gnss/rmd/t/aindex.bin
-vendor/etc/gnss/rmd/t/a_1
-vendor/etc/gnss/rmd/f/aindex.bin
-vendor/etc/gnss/rmd/f/a_1
-vendor/etc/gnss/rmd/c/aindex.bin
 vendor/etc/gnss/rmd/c/a_1
-vendor/etc/gnss/gnss_lss_thirdparty.conf
+vendor/etc/gnss/rmd/c/aindex.bin
+vendor/etc/gnss/rmd/e/a_1
+vendor/etc/gnss/rmd/e/aindex.bin
+vendor/etc/gnss/rmd/f/a_1
+vendor/etc/gnss/rmd/f/aindex.bin
+vendor/etc/gnss/rmd/g/a_1
+vendor/etc/gnss/rmd/g/aindex.bin
+vendor/etc/gnss/rmd/t/a_1
+vendor/etc/gnss/rmd/t/aindex.bin
 vendor/etc/init/vendor.huawei.hardware.gnss@1.2-service.rc
 vendor/etc/init/vendor.huawei.hardware.hisupl@1.0-service.rc
-vendor/etc/geoloc.conf
 vendor/lib/libgnss_lss_gw_thirdparty.so
 vendor/lib/vendor.huawei.hardware.gnss@1.0.so
 vendor/lib/vendor.huawei.hardware.gnss@1.1.so
 vendor/lib/vendor.huawei.hardware.gnss@1.2.so
 vendor/lib/vendor.huawei.hardware.hisupl@1.0.so
-vendor/lib64/hw/gps.hi1102.default.so
-vendor/lib64/hw/gps.hisi.default.so
-vendor/lib64/hw/hisupl.hi1102.default.so
-vendor/lib64/hw/hisupl.hi1102.default.so:vendor/lib64/hw/hisupl.hisi.default.so
-vendor/lib64/hw/vendor.huawei.hardware.gnss@1.2-impl.so
-vendor/lib64/hw/vendor.huawei.hardware.hisupl@1.0-impl.so
 vendor/lib64/libgnss_common_hisi.so
 vendor/lib64/libgnss_lss_gw_thirdparty.so
 vendor/lib64/libgnss_supl10client_hisi.so
@@ -338,11 +332,14 @@ vendor/lib64/vendor.huawei.hardware.gnss@1.0.so
 vendor/lib64/vendor.huawei.hardware.gnss@1.1.so
 vendor/lib64/vendor.huawei.hardware.gnss@1.2.so
 vendor/lib64/vendor.huawei.hardware.hisupl@1.0.so
+vendor/lib64/hw/gps.hi1102.default.so
+vendor/lib64/hw/gps.hisi.default.so
+vendor/lib64/hw/hisupl.hi1102.default.so
+vendor/lib64/hw/hisupl.hi1102.default.so:vendor/lib64/hw/hisupl.hisi.default.so
+vendor/lib64/hw/vendor.huawei.hardware.gnss@1.2-impl.so
+vendor/lib64/hw/vendor.huawei.hardware.hisupl@1.0-impl.so
 
 # Graphics
-vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/gralloc.hi6250.so
-vendor/lib/hw/hwcomposer.hi6250.so
 vendor/lib/libOpenCLFoundation.so
 vendor/lib/libSR_opencl.so
 vendor/lib/libhiion.so
@@ -351,8 +348,9 @@ vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.0.so
 vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.1.so
 vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.2.so
 vendor/lib/vendor.huawei.hardware.perfgenius@2.0.so
-vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/gralloc.hi6250.so
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/gralloc.hi6250.so
+vendor/lib/hw/hwcomposer.hi6250.so
 vendor/lib64/libOpenCLFoundation.so
 vendor/lib64/libSR_opencl.so
 vendor/lib64/libhiion.so
@@ -360,32 +358,34 @@ vendor/lib64/libperfgenius_vendor_client.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.1.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.2.so
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/gralloc.hi6250.so
 
 # Perfgenius HAL (use by camera)
 vendor/bin/hw/vendor.huawei.hardware.perfgenius@2.0-service
-vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc
 vendor/etc/perfgenius_config.xml
 vendor/etc/perfgenius_event_policy.xml
 vendor/etc/perfgenius_scenario_policy.xml
-vendor/lib/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
+vendor/etc/init/vendor.huawei.hardware.perfgenius@2.0-service.rc
 vendor/lib/libperfhub.so
 vendor/lib/libperfhub_service.so
-vendor/lib64/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
+vendor/lib/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
 vendor/lib64/libperfhub.so
 vendor/lib64/libperfhub_service.so
 vendor/lib64/vendor.huawei.hardware.perfgenius@2.0.so
+vendor/lib64/hw/vendor.huawei.hardware.perfgenius@2.0-impl.so
 
 # Mediacomm HAL (use by camera)
 vendor/bin/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-service
 vendor/etc/init/vendor.huawei.hardware.graphics.mediacomm@2.0-service.rc
-vendor/lib/hw/mediacomm.hi6250.so
-vendor/lib/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so
 vendor/lib/vendor.huawei.hardware.graphics.mediacomm@2.0.so
 vendor/lib/vendor.huawei.hardware.graphics.mediacomm@2.1.so
-vendor/lib64/hw/mediacomm.hi6250.so
-vendor/lib64/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so
+vendor/lib/hw/mediacomm.hi6250.so
+vendor/lib/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.mediacomm@2.1.so
+vendor/lib64/hw/mediacomm.hi6250.so
+vendor/lib64/hw/vendor.huawei.hardware.graphics.mediacomm@2.0-impl.so
 
 # DRM (ANE-LX1 support only L3)
 preavs/bin/hw/android.hardware.drm@1.1-service.widevine:vendor/bin/hw/android.hardware.drm@1.1-service.widevine
@@ -435,11 +435,11 @@ vendor/lib/ese_hw_hal.so
 vendor/lib64/ese_hw_hal.so
 
 # Modem
-vendor/etc/modemConfig/balong/basic_name
-vendor/etc/modemConfig/viacbp82d_shutdown_log.bcfg
 vendor/etc/modemConfig/viacbp82d_log.bcfg
+vendor/etc/modemConfig/viacbp82d_shutdown_log.bcfg
 vendor/etc/modemConfig/VIA/basic_name
 vendor/etc/modemConfig/VIA/viacbp82d_FieldTest.bcfg
+vendor/etc/modemConfig/balong/basic_name
 vendor/modem/modem_fw/readme.txt
 
 # OEMInfo
@@ -455,30 +455,30 @@ vendor/lib64/libstagefrighthw.so
 
 # RIL
 vendor/bin/hw/rild
-vendor/lib/libbalong-ril.so
-vendor/lib/libbalong-ril-1.so
-vendor/lib/libcommril.so
--vendor/lib/libril.so
 vendor/lib/lib_softap_hw.so
 vendor/lib/lib_wifi_sar.so
+vendor/lib/libbalong-ril-1.so
+vendor/lib/libbalong-ril.so
+vendor/lib/libcommril.so
+-vendor/lib/libril.so
 vendor/lib/vendor.huawei.hardware.hisiradio@1.0.so
 vendor/lib/vendor.huawei.hardware.hisiradio@1.1.so
-vendor/lib/vendor.huawei.hardware.radio@2.0.so
 vendor/lib/vendor.huawei.hardware.radio.chr@1.0.so
 vendor/lib/vendor.huawei.hardware.radio.deprecated@1.0.so
 vendor/lib/vendor.huawei.hardware.radio.ims@1.0.so
-vendor/lib64/libbalong-ril.so
-vendor/lib64/libbalong-ril-1.so
-vendor/lib64/libcommril.so
--vendor/lib64/libril.so
+vendor/lib/vendor.huawei.hardware.radio@2.0.so
 vendor/lib64/lib_softap_hw.so
 vendor/lib64/lib_wifi_sar.so
+vendor/lib64/libbalong-ril-1.so
+vendor/lib64/libbalong-ril.so
+vendor/lib64/libcommril.so
+-vendor/lib64/libril.so
 vendor/lib64/vendor.huawei.hardware.hisiradio@1.0.so
 vendor/lib64/vendor.huawei.hardware.hisiradio@1.1.so
-vendor/lib64/vendor.huawei.hardware.radio@2.0.so
 vendor/lib64/vendor.huawei.hardware.radio.chr@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.deprecated@1.0.so
 vendor/lib64/vendor.huawei.hardware.radio.ims@1.0.so
+vendor/lib64/vendor.huawei.hardware.radio@2.0.so
 
 # Wifi
 vendor/bin/hostapd_hisi
@@ -488,8 +488,8 @@ vendor/lib/libwifi_bcm.so
 vendor/lib64/libhwwifi-hal.so
 vendor/lib64/libwifi-hal.so
 vendor/lib64/libwifi_bcm.so
-vendor/lib64/libwifi_wapi_hisi.so
 vendor/lib64/libwifi_ext.default.so
+vendor/lib64/libwifi_wapi_hisi.so
 vendor/lib64/vendor.huawei.hardware.wifi.supplicant@2.0.so
 vendor/lib64/vendor.huawei.hardware.wifi.supplicant@2.1.so
 vendor/lib64/vendor.huawei.hardware.wifi@1.0.so
@@ -504,11 +504,11 @@ vendor/lib64/hw/vendor.huawei.hardware.wifi@1.1-impl.so
 # Sensors
 vendor/bin/hw/vendor.huawei.hardware.sensors@1.0-service
 vendor/etc/init/vendor.huawei.hardware.sensors@1.0-service.rc
-vendor/lib/hw/sensors.default.so:vendor/lib/hw/sensors.hi6250.so
 vendor/lib/vendor.huawei.hardware.sensors@1.0.so
+vendor/lib/hw/sensors.default.so:vendor/lib/hw/sensors.hi6250.so
+vendor/lib64/vendor.huawei.hardware.sensors@1.0.so
 vendor/lib64/hw/sensors.default.so:vendor/lib64/hw/sensors.hi6250.so
 vendor/lib64/hw/vendor.huawei.hardware.sensors@1.0-impl.so
-vendor/lib64/vendor.huawei.hardware.sensors@1.0.so
 
 # TEE
 -bin/tee_auth_daemon
@@ -576,7 +576,6 @@ vendor/bin/goodix_5266_ta.sec
 vendor/bin/goodix_5296_ta.sec
 vendor/bin/goodix_5296_ta_handel.sec
 vendor/bin/goodix_8206_ta.sec
-vendor/bin/hw/vendor.huawei.hardware.libteec@2.0-service
 vendor/bin/silead_6165_ta.sec
 vendor/bin/silead_6175_ta.sec
 vendor/bin/silead_61853_ta.sec
@@ -591,7 +590,9 @@ vendor/bin/syna_155A_ta.sec
 vendor/bin/syna_155A_ta_lldp.sec
 vendor/bin/teecd
 vendor/bin/tlogcat
-vendor/lib/hw/vendor.huawei.hardware.libteec@2.0-impl.so
+vendor/bin/hw/vendor.huawei.hardware.libteec@2.0-service
+vendor/etc/native_packages.xml:vendor/etc/native_packages.bin
+vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc
 vendor/lib/libc_secshared.so
 vendor/lib/libkeymaster3_attestation.so
 vendor/lib/libstorekeybox.so
@@ -599,7 +600,7 @@ vendor/lib/libteec.so
 vendor/lib/libteec_eid.so
 vendor/lib/libteec_vendor.so
 vendor/lib/vendor.huawei.hardware.libteec@2.0.so
-vendor/lib64/hw/vendor.huawei.hardware.libteec@2.0-impl.so
+vendor/lib/hw/vendor.huawei.hardware.libteec@2.0-impl.so
 vendor/lib64/libc_secshared.so
 vendor/lib64/libkeymaster3_attestation.so
 vendor/lib64/libstorekeybox.so
@@ -608,8 +609,7 @@ vendor/lib64/libteec.so
 vendor/lib64/libteec_eid.so
 vendor/lib64/libteec_vendor.so
 vendor/lib64/vendor.huawei.hardware.libteec@2.0.so
-vendor/etc/init/vendor.huawei.hardware.libteec@2.0-service.rc
-vendor/etc/native_packages.xml:vendor/etc/native_packages.bin
+vendor/lib64/hw/vendor.huawei.hardware.libteec@2.0-impl.so
 
 # Keystore
 vendor/etc/init/android.hardware.keymaster@3.0-service.rc
