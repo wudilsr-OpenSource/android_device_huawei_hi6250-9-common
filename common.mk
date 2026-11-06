@@ -306,6 +306,9 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Protobuf
 PRODUCT_PACKAGES += \
