@@ -607,9 +607,7 @@ vendor/lib64/hw/vendor.huawei.hardware.libteec@2.0-impl.so
 # Keystore
 vendor/etc/init/android.hardware.keymaster@3.0-service.rc
 vendor/lib/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib/hw/android.hardware.keymaster@3.0-impl-hisi.so
-vendor/lib/hw/keystore.hi6250.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so:vendor/lib64/hw/android.hardware.keymaster@3.0-impl-hisi.so
-vendor/lib64/hw/keystore.hi6250.so
 
 # Thermal
 vendor/lib/hw/thermal.hi6250.so
