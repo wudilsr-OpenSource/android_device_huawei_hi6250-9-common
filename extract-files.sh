@@ -91,6 +91,19 @@ function blob_fixup() {
         vendor/bin/hostapd_hisi)
             "${PATCHELF}" --add-needed "libshim_binder.so" "${2}"
             ;;
+        vendor/bin/hw/vendor.huawei.hardware.wifi@1.1-service)
+            # close(dirfd(dir)) aborts under fdsan; close the DIR fd through
+            # android_fdsan_get_owner_tag/close_with_tag instead.
+            if [ "$(md5sum "${2}" | cut -d' ' -f1)" = "00b663367e9be09d2a08391b4ba75aa9" ]; then
+                printf '\x96\xe6\x00\x94' | dd of="${2}" bs=1 seek=$((0x14b2c)) conv=notrunc status=none
+                printf '\xb9\x02\xff\x97\x58\x02\xff\x17\x1f\x20\x03\xd5' | dd of="${2}" bs=1 seek=$((0x4e584)) conv=notrunc status=none
+                printf '\xe1\x03\x00\xaa\xe0\x03\x14\x2a\xb2\x01\x00\x94\x0f\x17\x00\x14' | dd of="${2}" bs=1 seek=$((0xeee8)) conv=notrunc status=none
+                printf 'android_fdsan_get_owner_tag\000' | dd of="${2}" bs=1 seek=$((0x222e)) conv=notrunc status=none
+                printf 'android_fdsan_close_with_tag\000' | dd of="${2}" bs=1 seek=$((0x6c81)) conv=notrunc status=none
+            else
+                echo "wifi@1.1-service: unexpected blob, fdsan patch skipped" >&2
+            fi
+            ;;
         vendor/etc/camera/*|odm/etc/camera/*)
             sed -i 's/gb2312/iso-8859-1/g' "${2}"
             sed -i 's/GB2312/iso-8859-1/g' "${2}"
