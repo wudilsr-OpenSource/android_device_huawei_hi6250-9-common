@@ -37,3 +37,7 @@ dontaudit system_server mediaprovider:process getattr;
 dontaudit system_server untrusted_app_29:process getattr;
 dontaudit system_server bluetooth:process getattr;
 dontaudit system_server keystore:process getattr;
+
+dontaudit appdomain vendor_default_prop:file { open getattr };
+dontaudit untrusted_app default_android_service:service_manager find;
+dontaudit isolated_app content_capture_service:service_manager find;

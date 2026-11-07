@@ -1,0 +1,13 @@
+allow tee system_file:file { getattr open read };
+allow tee tee:capability { chown fowner };
+allow tee tee:process { execmem };
+allow tee teecd_data_file:dir { add_name create remove_name setattr write };
+allow tee teecd_data_file:file { unlink };
+allow tee teecd_device:chr_file { ioctl open read write };
+allow tee teecd_data_file:file { getattr open read setattr };
+allow tee hal_gatekeeper_server:dir search;
+allow tee hal_gatekeeper_server:file { getattr open read };
+allow tee hal_gatekeeper_server:process getattr;
+allow tee hal_fingerprint_server:dir search;
+allow tee hal_fingerprint_server:file { getattr open read };
+allow tee hal_fingerprint_server:process getattr;

@@ -1,0 +1,4 @@
+hal_client_domain(system_server, vendor_hal_hisi_sensors)
+hal_client_domain(system_server, vendor_hal_hisi_wifi)
+hal_client_domain(system_server, vendor_hal_hisi_gnss)
+hal_client_domain(system_server, hal_wifi_supplicant)

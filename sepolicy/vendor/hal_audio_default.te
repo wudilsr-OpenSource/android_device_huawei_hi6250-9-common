@@ -1,0 +1,13 @@
+get_prop(hal_audio_default, config_prop)
+get_prop(hal_audio_default, default_prop)
+get_prop(hal_audio_default, system_prop)
+
+allow hal_audio_default device:chr_file { ioctl open read write };
+allow hal_audio_default self:netlink_kobject_uevent_socket { bind create read setopt };
+allow hal_audio_default sysfs:file { getattr open read };
+allow hal_audio_default oeminfo_device:dir remove_name;
+allow hal_audio_default oeminfo_device:file { getattr open read unlink };
+allow hal_audio_default oeminfo_nvm:unix_stream_socket connectto;
+allow hal_audio_default oeminfo_socket:sock_file write;
+allow hal_audio_default hal_audio_default:netlink_kobject_uevent_socket { bind create read setopt };
+allow hal_audio_default oeminfo_device:dir { write };

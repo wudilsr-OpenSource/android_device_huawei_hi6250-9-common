@@ -1,8 +1,11 @@
 
 allow hal_fingerprint_default tee:unix_stream_socket { connectto };
-allow tee hal_fingerprint_default:dir { search };
-allow tee hal_fingerprint_default:file { open read getattr };
-allow tee hal_fingerprint_default:process { getattr };
 allow hal_fingerprint_default tee:fd { use };
 allow hal_fingerprint_default sysfs:file { write };
 
+get_prop(hal_fingerprint_default, default_prop)
+allow hal_fingerprint_default fps_device:chr_file { ioctl open read write };
+allow hal_fingerprint_default teecd_device:chr_file { ioctl read write };
+allow hal_fingerprint_default vendor_data_file:dir { add_name write };
+allow hal_fingerprint_default vendor_data_file:file { create open read write };
+allow hal_fingerprint_default vendor_hal_hisi_perf_hwservice:hwservice_manager find;

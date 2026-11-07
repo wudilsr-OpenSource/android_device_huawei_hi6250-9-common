@@ -1,0 +1,4 @@
+hwbinder_use(vendor_hal_libteec_default)
+allow vendor_hal_libteec_default default_android_hwservice:hwservice_manager { add find };
+allow vendor_hal_libteec_default hidl_base_hwservice:hwservice_manager add;
+get_prop(vendor_hal_libteec_default, hwservicemanager_prop)

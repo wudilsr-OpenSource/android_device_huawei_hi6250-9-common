@@ -1,0 +1,4 @@
+allow vendor_hal_hisi_sensors_default device:chr_file { ioctl open read };
+allow vendor_hal_hisi_sensors_default hal_sensors_hwservice:hwservice_manager { add find };
+allow vendor_hal_hisi_sensors_default hidl_base_hwservice:hwservice_manager { add };
+allow vendor_hal_hisi_sensors_default sysfs:file { open read };
