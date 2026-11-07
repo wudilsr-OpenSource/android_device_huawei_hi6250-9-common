@@ -1,2 +1,20 @@
 # Fastbootd
 ro.fastbootd.available         u:object_r:exported_default_prop:s0
+
+# Set by vendor_hisi_connectivity, readable by vendor domains.
+ro.connectivity.sub_chiptype   u:object_r:vendor_default_prop:s0 exact
+
+# Read by cameraserver and the camera blobs.
+persist.vendor.camera.privapp.list u:object_r:vendor_hisi_camera_prop:s0 exact string
+vendor.camera.dis.flag         u:object_r:vendor_hisi_camera_prop:s0 exact int
+vendor.camera.drop.buffer      u:object_r:vendor_hisi_camera_prop:s0 exact int
+
+# phone.prop entries writable by vendor_hisi_connectivity; value types are left
+# unconstrained because some SKUs ship values such as "ture".
+ro.config.hisi_cdma_supported   u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.config.support_wcdma_modem1  u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.config.dsds_mode             u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.config.fast_switch_simslot   u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.config.full_network_support  u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.config.hw_dsdspowerup        u:object_r:vendor_hisi_telephony_prop:s0 exact
+ro.quick_broadcast_cardstatus   u:object_r:vendor_hisi_telephony_prop:s0 exact

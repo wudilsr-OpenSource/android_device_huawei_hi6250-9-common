@@ -1,0 +1,4 @@
+allow installd modem_file:filesystem { quotaget };
+allow installd modem_vendor_file:filesystem { quotaget };
+allow installd splashtwo_file:filesystem { quotaget };
+allow installd teecd_data_file:filesystem { quotaget };

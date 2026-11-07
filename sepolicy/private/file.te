@@ -1,0 +1,4 @@
+allow modem_file self:filesystem associate;
+allow modem_vendor_file self:filesystem associate;
+allow splashtwo_file self:filesystem associate;
+allow teecd_data_file self:filesystem associate;

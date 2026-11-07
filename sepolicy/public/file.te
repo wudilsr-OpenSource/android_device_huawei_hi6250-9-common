@@ -1,0 +1,9 @@
+# Declared here so that system_ext private policy can grant the plat domains
+# (init/kernel) access to these huawei partition file types.
+type modem_fw_file, file_type;
+type modem_log_file, file_type;
+type modem_nv_file, file_type;
+type modem_secure_file, file_type;
+
+# mmcblk0 discard_max_bytes sysfs node, written by init in init.rc.
+type sysfs_mmc_discard, sysfs_type, fs_type;

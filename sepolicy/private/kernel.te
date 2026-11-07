@@ -1,0 +1,28 @@
+allow kernel self:capability { mknod };
+allow kernel device:dir { write add_name };
+allow kernel block_device:blk_file { ioctl open read };
+allow kernel system_data_root_file:file { setattr read append open getattr };
+allow kernel system_data_root_file:dir { open read setattr };
+allow kernel block_device:blk_file { write };
+allow kernel device:chr_file { create open read setattr write };
+allow kernel modem_file:dir { add_name getattr open read remove_name rmdir write };
+allow kernel modem_file:file { append create getattr open read write };
+allow kernel modem_vendor_file:file { getattr open read };
+allow kernel proc:file { open read };
+allow kernel system_data_file:dir { open read setattr };
+allow kernel system_data_file:file { append getattr open read setattr };
+
+allow kernel modem_nv_file:dir { rmdir remove_name write open read getattr };
+allow kernel modem_nv_file:file { open read getattr };
+allow kernel modem_fw_file:file { getattr open read };
+allow kernel modem_log_file:file { append create open read write };
+allow kernel modem_log_file:dir { add_name write };
+allow kernel modem_secure_file:file { open read };
+allow kernel splashtwo_file:dir { add_name create getattr open read remove_name rmdir search setattr write };
+allow kernel splashtwo_file:file { create getattr open read setattr unlink write };
+allow kernel self:capability { chown };
+allow kernel vendor_file:file { getattr open read };
+allow kernel self:capability { fsetid };
+
+# hisi_freq_ctl reports IO load by writing io_is_busy.
+allow kernel sysfs_devices_system_cpu:file { write };

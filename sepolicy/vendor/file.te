@@ -2,14 +2,9 @@
 type thirdmodem_file, file_type;
 type thirdmodemnvm_file, file_type;
 type thirdmodemnvmbkp_file, file_type;
-type cust_file, file_type;
-type modem_fw_file, file_type;
-type modem_log_file, file_type;
-type modem_nv_file, file_type;
-type modem_secure_file, file_type;
-type splashtwo_file, file_type;
-type version_file, file_type;
 
-# TEE
-type teecd_data_file, file_type;
-type teecd_data_file_system, file_type;
+# Vendor properties loaded from phone.prop.
+vendor_public_prop(vendor_hisi_telephony_prop)
+
+# Camera properties read by cameraserver and the camera blobs.
+vendor_public_prop(vendor_hisi_camera_prop)

@@ -1,0 +1,3 @@
+# vold scans these partitions and queries the filesystem map (FS_IOC_GETFSMAP).
+allow vold { splashtwo_file teecd_data_file }:dir { open read getattr search ioctl };
+allowxperm vold { splashtwo_file teecd_data_file }:dir ioctl 0x5879;

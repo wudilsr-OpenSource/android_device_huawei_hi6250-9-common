@@ -1,0 +1,5 @@
+# genfscon matches the real /devices paths, not the /sys/class symlinks.
+genfscon sysfs /devices/platform/hi_mci.0/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/discard_max_bytes u:object_r:sysfs_mmc_discard:s0
+genfscon sysfs /devices/platform/hisi_vibrator@fff34000/leds/vibrator/ u:object_r:sysfs_vibrator:s0
+# PMIC RGB LEDs; reuse sysfs_leds so the AOSP light HAL rules apply.
+genfscon sysfs /devices/platform/fff34000.pmic/fff34000.pmic:pmic_led@a0/leds/ u:object_r:sysfs_leds:s0

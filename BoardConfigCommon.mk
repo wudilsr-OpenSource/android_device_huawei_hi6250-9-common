@@ -167,6 +167,10 @@ BOARD_ROOT_EXTRA_FOLDERS += \
 # SELinux
 include device/hisi/sepolicy/SEPolicy.mk
 
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
 # Vendor
 VENDOR_SECURITY_PATCH := 2022-02-01 # AGS2-LGRP5-CHN 2.0.0.230
 

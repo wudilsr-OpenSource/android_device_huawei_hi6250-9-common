@@ -1,0 +1,12 @@
+allow init modem_file:filesystem { mount relabelfrom relabelto };
+allow init modem_file:dir mounton;
+allow init modem_vendor_file:filesystem { mount relabelfrom relabelto };
+allow init modem_vendor_file:dir mounton;
+allow init splashtwo_file:filesystem { mount relabelfrom relabelto };
+allow init splashtwo_file:dir mounton;
+allow init teecd_data_file:filesystem { mount relabelfrom relabelto };
+allow init teecd_data_file:dir mounton;
+allow init modem_nv_file:dir mounton;
+allow init socket_device:sock_file { create setattr };
+allow init sysfs_mmc_discard:file { open write };
+allow init sysfs_vibrator:file setattr;
