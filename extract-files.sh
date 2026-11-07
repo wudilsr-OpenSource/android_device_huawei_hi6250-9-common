@@ -61,6 +61,16 @@ fi
 function blob_fixup() {
     case "${1}" in
        vendor/lib*/hw/audio.primary.hi6250.so|vendor/lib*/hw/audio.primary_hisi.hi6250.so)
+            # libsmartpakit dev_open() destroys its global mutex when the
+            # internal init fails, and the following dev_close() then locks
+            # that destroyed mutex and aborts under FORTIFY. Guard the call
+            # on the device handle instead of the dlsym'd pointer, which
+            # stays non-NULL after a failed open.
+            if [ "$(dd if="${2}" bs=1 skip=$((0x3ff54)) count=8 status=none | od -An -tx1 | tr -d ' \n')" = "680000b4600e40f9" ]; then
+                printf '\x60\x0e\x40\xf9\x40\x00\x00\xb4' | dd of="${2}" bs=1 seek=$((0x3ff54)) conv=notrunc status=none
+            else
+                echo "audio.primary: unexpected blob, smartpakit close patch skipped" >&2
+            fi
 	    "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
 	    ;;
 	vendor/lib*/hw/gralloc.hi6250.so)
