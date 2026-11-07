@@ -1,0 +1,22 @@
+hwbinder_use(vendor_hisi_wifi_supplicant)
+hal_server_domain(vendor_hisi_wifi_supplicant, hal_wifi_supplicant)
+get_prop(vendor_hisi_wifi_supplicant, hwservicemanager_prop)
+get_prop(vendor_hisi_wifi_supplicant, config_prop)
+get_prop(vendor_hisi_wifi_supplicant, default_prop)
+allow vendor_hisi_wifi_supplicant default_android_hwservice:hwservice_manager { add };
+allow vendor_hisi_wifi_supplicant hal_wifi_supplicant_hwservice:hwservice_manager { add };
+allow vendor_hisi_wifi_supplicant hidl_base_hwservice:hwservice_manager { add };
+allow vendor_hisi_wifi_supplicant sysfs_net:dir { search };
+allow vendor_hisi_wifi_supplicant vendor_hisi_wifi_supplicant:capability { net_admin net_raw setgid setuid };
+allow vendor_hisi_wifi_supplicant vendor_hisi_wifi_supplicant:netlink_generic_socket { bind create getattr read setopt write };
+allow vendor_hisi_wifi_supplicant vendor_hisi_wifi_supplicant:netlink_route_socket { bind create nlmsg_write read write };
+allow vendor_hisi_wifi_supplicant vendor_hisi_wifi_supplicant:packet_socket { bind create ioctl };
+allow vendor_hisi_wifi_supplicant vendor_hisi_wifi_supplicant:udp_socket { create ioctl };
+allow vendor_hisi_wifi_supplicant wpa_data_file:dir { add_name create remove_name rmdir setattr write };
+allow vendor_hisi_wifi_supplicant wpa_data_file:file { getattr open read write };
+allow vendor_hisi_wifi_supplicant wpa_data_file:sock_file { create setattr unlink };
+
+# Needed to set drop_unicast_in_l2_multicast for wlan0.
+allow vendor_hisi_wifi_supplicant proc_net:file write;
+
+allowxperm vendor_hisi_wifi_supplicant self:udp_socket ioctl priv_sock_ioctls;

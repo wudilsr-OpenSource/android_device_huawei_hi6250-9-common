@@ -1,0 +1,15 @@
+get_prop(vendor_hal_hisi_wifi_default, wifi_hal_prop)
+allow vendor_hal_hisi_wifi_default default_android_hwservice:hwservice_manager { add find };
+allow vendor_hal_hisi_wifi_default hal_wifi_hwservice:hwservice_manager { add find };
+allow vendor_hal_hisi_wifi_default hidl_base_hwservice:hwservice_manager { add };
+allow vendor_hal_hisi_wifi_default init:unix_stream_socket { connectto };
+allow vendor_hal_hisi_wifi_default property_socket:sock_file { write };
+allow vendor_hal_hisi_wifi_default sysfs_net:dir { open read search };
+allow vendor_hal_hisi_wifi_default tombstone_wifi_data_file:dir r_dir_perms;
+allow vendor_hal_hisi_wifi_default vendor_data_file:lnk_file { read };
+allow vendor_hal_hisi_wifi_default vendor_hal_hisi_wifi_default:capability { net_admin };
+allow vendor_hal_hisi_wifi_default vendor_hal_hisi_wifi_default:netlink_generic_socket { bind create getattr read setopt write };
+allow vendor_hal_hisi_wifi_default vendor_hal_hisi_wifi_default:udp_socket { create ioctl };
+
+allowxperm vendor_hal_hisi_wifi_default self:udp_socket ioctl priv_sock_ioctls;
+set_prop(vendor_hal_hisi_wifi_default, wifi_hal_prop)

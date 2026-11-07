@@ -1,0 +1,27 @@
+get_prop(vendor_hisi_connectivity, default_prop)
+allow vendor_hisi_connectivity block_device:blk_file { getattr open read };
+allow vendor_hisi_connectivity device:chr_file { getattr ioctl open read setattr write };
+allow vendor_hisi_connectivity init:unix_stream_socket { connectto };
+allow vendor_hisi_connectivity kernel:process { setsched };
+allow vendor_hisi_connectivity kmsg_device:chr_file { getattr open write };
+allow vendor_hisi_connectivity proc:file { getattr open read };
+allow vendor_hisi_connectivity proc_cmdline:file { getattr open read };
+allow vendor_hisi_connectivity proc_misc:file { open read };
+allow vendor_hisi_connectivity property_socket:sock_file { write };
+allow vendor_hisi_connectivity sysfs:file { getattr open read setattr write };
+allow vendor_hisi_connectivity vendor_data_file:dir { add_name open read remove_name setattr write };
+allow vendor_hisi_connectivity vendor_data_file:file { append create getattr open read rename setattr unlink write };
+allow vendor_hisi_connectivity vendor_data_file:lnk_file { create read rename unlink };
+allow vendor_hisi_connectivity vendor_hisi_connectivity:capability { chown dac_override fowner fsetid sys_nice };
+allow vendor_hisi_connectivity vendor_hisi_connectivity:netlink_socket { bind create read write };
+allow vendor_hisi_connectivity vendor_toolbox_exec:file { execute_no_trans };
+allow vendor_hisi_connectivity wpa_data_file:file { getattr setattr };
+
+# Also covers ro.connectivity.sub_chiptype (see property_contexts).
+set_prop(vendor_hisi_connectivity, vendor_default_prop)
+
+# Properties loaded from /vendor/phone.prop.
+set_prop(vendor_hisi_connectivity, system_prop)
+set_prop(vendor_hisi_connectivity, vendor_hisi_telephony_prop)
+# Reuses the AOSP set_prop() rules for radio_control_prop / radio_prop.
+hal_server_domain(vendor_hisi_connectivity, hal_telephony)

@@ -1,0 +1,5 @@
+allow vendor_hal_hisi_gnss_default hal_gnss_hwservice:hwservice_manager { add find };
+allow vendor_hal_hisi_gnss_default hidl_base_hwservice:hwservice_manager add;
+allow vendor_hal_hisi_gnss_default sysfs:file { getattr open read };
+allow vendor_hal_hisi_gnss_default vendor_data_file:sock_file write;
+allow vendor_hal_hisi_gnss_default vendor_hisi_gnss:unix_stream_socket connectto;

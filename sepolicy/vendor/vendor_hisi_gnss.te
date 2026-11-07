@@ -1,0 +1,21 @@
+get_prop(vendor_hisi_gnss, default_prop)
+allow vendor_hisi_gnss device:chr_file { getattr open read write };
+allow vendor_hisi_gnss sysfs:file { getattr open read write };
+allow vendor_hisi_gnss sysfs_wake_lock:file { getattr open write };
+allow vendor_hisi_gnss vendor_data_file:dir { add_name create open read remove_name write };
+allow vendor_hisi_gnss vendor_data_file:file { append create getattr open read rename setattr unlink write };
+allow vendor_hisi_gnss vendor_data_file:lnk_file { read };
+allow vendor_hisi_gnss vendor_data_file:sock_file { create setattr unlink write };
+allow vendor_hisi_gnss vendor_hisi_gnss:capability { chown fowner };
+net_domain(vendor_hisi_gnss)
+allow vendor_hisi_gnss vendor_toolbox_exec:file { execute_no_trans };
+
+binder_use(vendor_hisi_gnss)
+allow vendor_hisi_gnss hal_system_suspend_service:service_manager find;
+binder_call(vendor_hisi_gnss, system_suspend_server)
+
+hwbinder_use(vendor_hisi_gnss)
+get_prop(vendor_hisi_gnss, hwservicemanager_prop)
+allow vendor_hisi_gnss fwk_sensor_hwservice:hwservice_manager find;
+binder_call(vendor_hisi_gnss, system_server)
+binder_call(system_server, vendor_hisi_gnss)

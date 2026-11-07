@@ -1,0 +1,9 @@
+get_prop(rild, system_prop)
+get_prop(rild, default_prop)
+get_prop(rild, config_prop)
+get_prop(rild, vendor_hisi_telephony_prop)
+allow rild default_android_hwservice:hwservice_manager { add };
+allow rild device:chr_file { open read write };
+allow rild sysfs:file { write };
+
+set_prop(rild, vendor_default_prop)
