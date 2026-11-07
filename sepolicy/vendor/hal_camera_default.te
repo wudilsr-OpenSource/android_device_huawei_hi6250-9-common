@@ -1,0 +1,33 @@
+get_prop(hal_camera_default, config_prop)
+allow hal_camera_default default_android_hwservice:hwservice_manager add;
+get_prop(hal_camera_default, default_prop)
+allow hal_camera_default device:chr_file { ioctl open read write };
+allow hal_camera_default hal_graphics_composer_default:fd use;
+allow hal_camera_default hal_sensors_hwservice:hwservice_manager find;
+allow hal_camera_default memory_latency_device:chr_file rw_file_perms;
+allow hal_camera_default memtrackproxy_service:service_manager find;
+allow hal_camera_default oeminfo_device:dir { remove_name write };
+allow hal_camera_default oeminfo_device:file { getattr open read unlink };
+allow hal_camera_default oeminfo_nvm:unix_stream_socket connectto;
+allow hal_camera_default oeminfo_socket:sock_file write;
+allow hal_camera_default proc:file { getattr open read };
+allow hal_camera_default proc_meminfo:file { open read };
+allow hal_camera_default sysfs:file { getattr open read };
+allow hal_camera_default sysfs_leds:dir search;
+allow hal_camera_default vendor_data_file:dir { add_name write };
+allow hal_camera_default vendor_data_file:file { create getattr open setattr write };
+allow hal_camera_default vendor_hal_hisi_perf_hwservice:hwservice_manager find;
+
+hal_client_domain(hal_camera_default, vendor_hal_hisi_perf)
+hal_client_domain(hal_camera_default, vendor_hal_hisi_sensors)
+
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+hal_client_domain(hal_camera_default, vendor_hal_hisi_display)
+hal_client_domain(hal_camera_default, vendor_hal_hisi_media)
+
+binder_call(hal_camera_default, system_server)
+binder_call(system_server, hal_camera_default)
+
+allow hal_camera_default vendor_hisi_camera_prop:file r_file_perms;
+allow cameraserver vendor_hisi_camera_prop:file r_file_perms;
+allow appdomain vendor_hisi_camera_prop:file r_file_perms;

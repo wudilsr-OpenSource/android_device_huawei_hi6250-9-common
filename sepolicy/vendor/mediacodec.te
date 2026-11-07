@@ -1,0 +1,2 @@
+allow mediacodec device:chr_file { ioctl open read write };
+get_prop(mediacodec, default_prop)

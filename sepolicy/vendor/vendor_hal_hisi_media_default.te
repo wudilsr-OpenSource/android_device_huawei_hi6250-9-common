@@ -1,0 +1,4 @@
+allow vendor_hal_hisi_media_default graphics_device:chr_file { ioctl open read write };
+allow vendor_hal_hisi_media_default hal_graphics_allocator_default:fd use;
+allow vendor_hal_hisi_media_default hidl_base_hwservice:hwservice_manager add;
+allow vendor_hal_hisi_media_default vendor_hal_hisi_display_hwservice:hwservice_manager { add find };
